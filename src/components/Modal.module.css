@@ -1,0 +1,378 @@
+/* ============================================================
+   MODAL BASE
+   ============================================================ */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(11, 27, 47, 0.6);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  animation: overlayIn 0.3s ease;
+}
+
+@keyframes overlayIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.modalContent {
+  background: var(--bg-modal);
+  max-width: 720px;
+  width: 100%;
+  max-height: 85vh;
+  overflow-y: auto;
+  border-radius: 1.5rem;
+  padding: 2rem;
+  box-shadow: 0 40px 80px -20px var(--shadow-color);
+  position: relative;
+  animation: modalIn 0.3s ease;
+}
+
+@keyframes modalIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.95) translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.modalClose {
+  position: sticky;
+  top: 0;
+  float: right;
+  background: none;
+  border: none;
+  font-size: 1.6rem;
+  color: var(--text-light);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  line-height: 1;
+  z-index: 10;
+}
+
+.modalClose:hover {
+  color: var(--text-primary);
+  transform: rotate(90deg);
+}
+
+.modalTag {
+  display: inline-block;
+  background: var(--tag-bg);
+  color: var(--tag-text);
+  padding: 0.1rem 1rem;
+  border-radius: 30px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  margin-bottom: 0.6rem;
+}
+
+.modalContent h2 {
+  font-size: 1.6rem;
+  margin-bottom: 0.3rem;
+  border-bottom: 2px solid var(--border-color);
+  padding-bottom: 0.6rem;
+  color: var(--text-primary);
+}
+
+.modalMeta {
+  color: var(--text-light);
+  font-size: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.modalBodyContent {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.8;
+}
+
+.modalBodyContent h3 {
+  font-size: 1.1rem;
+  margin: 1rem 0 0.4rem;
+  color: var(--text-primary);
+}
+
+.featureGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 0.4rem 0.8rem;
+  background: var(--bg-feature-grid);
+  padding: 0.8rem 1.2rem;
+  border-radius: 0.8rem;
+  margin: 0.6rem 0;
+}
+
+.featureGrid span {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.featureGrid span i {
+  color: var(--primary);
+  width: 1.2rem;
+  font-size: 0.9rem;
+}
+
+.modalTechTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 0.6rem 0;
+}
+
+.modalTechTags span {
+  background: var(--tag-bg);
+  color: var(--tag-text);
+  padding: 0.1rem 0.8rem;
+  border-radius: 30px;
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+
+.repoLink {
+  color: var(--link-color);
+  text-decoration: none;
+  border-bottom: 1px solid var(--link-color);
+}
+
+.repoLink:hover {
+  border-bottom-width: 2px;
+}
+
+/* ============================================================
+   CREDENTIALS - DISEÑO PROFESIONAL
+   ============================================================ */
+.credentialsBox {
+  background: var(--credentials-bg);
+  border: 1px solid var(--credentials-border);
+  border-radius: 0.8rem;
+  padding: 1rem 1.2rem;
+  margin: 0.8rem 0;
+  position: relative;
+}
+
+.credentialsBox .credHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 0.8rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 1px solid var(--credentials-border);
+}
+
+.credentialsBox .credHeader i {
+  color: var(--primary);
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.credentialsBox .credHeader h4 {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  margin: 0;
+}
+
+.credentialsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem 1.5rem;
+}
+
+.credentialItem {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.credLabel {
+  font-size: 0.65rem;
+  font-weight: 500;
+  color: var(--text-light);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.credValue {
+  font-family: 'Courier New', 'Fira Code', monospace;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  background: var(--credentials-value-bg);
+  padding: 0.25rem 0.6rem;
+  border-radius: 4px;
+  border: 1px solid var(--credentials-border);
+  letter-spacing: 0.3px;
+  user-select: all;
+  display: inline-block;
+  width: fit-content;
+}
+
+.credValue:hover {
+  border-color: var(--primary);
+  background: var(--primary-light);
+  color: var(--primary);
+  transition: all 0.2s ease;
+}
+
+/* ============================================================
+   MODAL IMAGE
+   ============================================================ */
+.modalImageLink {
+  display: block;
+  margin: -2rem -2rem 1rem -2rem;
+  border-radius: 1.5rem 1.5rem 0 0;
+  overflow: hidden;
+  position: relative;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modalImageWrapper {
+  position: relative;
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+  background: var(--bg-card);
+}
+
+.modalImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  transition: transform 0.4s ease;
+  display: block;
+}
+
+.modalImageLink:hover .modalImage {
+  transform: scale(1.03);
+}
+
+.modalImageOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(11, 27, 47, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  color: #fff;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+}
+
+.modalImageLink:hover .modalImageOverlay {
+  opacity: 1;
+}
+
+.modalImageOverlay i {
+  font-size: 2rem;
+  color: #fff;
+}
+
+.modalImageOverlay span {
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 768px) {
+  .modalContent {
+    padding: 1.5rem;
+    max-height: 90vh;
+  }
+
+  .modalContent h2 {
+    font-size: 1.4rem;
+  }
+
+  .featureGrid {
+    grid-template-columns: 1fr;
+    padding: 0.8rem 1rem;
+  }
+
+  .credentialsGrid {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+
+  .modalImageLink {
+    margin: -1.5rem -1.5rem 1rem -1.5rem;
+  }
+
+  .modalImageWrapper {
+    height: 160px;
+  }
+
+  .modalImageOverlay i {
+    font-size: 1.5rem;
+  }
+
+  .modalImageOverlay span {
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .modalOverlay {
+    padding: 1rem;
+  }
+
+  .modalContent {
+    padding: 1.2rem;
+    border-radius: 1rem;
+  }
+
+  .modalContent h2 {
+    font-size: 1.2rem;
+  }
+
+  .featureGrid span {
+    font-size: 0.8rem;
+  }
+
+  .credValue {
+    font-size: 0.75rem;
+    word-break: break-all;
+  }
+
+  .modalImageLink {
+    margin: -1.2rem -1.2rem 0.8rem -1.2rem;
+  }
+
+  .modalImageWrapper {
+    height: 140px;
+  }
+}
