@@ -1,6 +1,6 @@
 .projects {
   margin-top: 3rem;
-  scroll-margin-top: 80px;
+  scroll-padding-top: 80px;
 }
 
 .sectionHeader {
@@ -53,7 +53,6 @@
   box-shadow: 0 18px 40px -12px var(--shadow-hover);
 }
 
-/* ===== IMAGEN DEL PROYECTO ===== */
 .projectImgWrapper {
   height: 200px;
   position: relative;
@@ -115,9 +114,9 @@
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
+  line-clamp: 3;
 }
 
-/* ===== TECH TAGS - SOLO 6 TECNOLOGÍAS ===== */
 .techTags {
   display: flex;
   flex-wrap: wrap;

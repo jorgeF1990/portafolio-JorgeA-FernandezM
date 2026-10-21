@@ -47,6 +47,12 @@ const Certifications = () => {
       name: 'Python',
       meta: ['8 horas', '2025'],
       link: 'https://drive.google.com/file/d/1o36sXga8S98vdVv28yqdiA8AySWcTnoC/view?usp=sharing'
+    },
+    {
+      icon: 'fas fa-brain',
+      name: 'Claude 101',
+      meta: ['Anthropic Education · 2026', 'Certificación'],
+      link: 'https://verify.skilljar.com/c/vwahg9ju2584'
     }
   ];
 

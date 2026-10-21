@@ -65,10 +65,13 @@ const Footer = () => {
             <a href="https://github.com/jorgeF1990" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
               <i className="fab fa-github"></i>
             </a>
+            <a href="https://gitlab.com/jorgeafm" target="_blank" rel="noopener noreferrer" aria-label="GitLab">
+              <i className="fab fa-gitlab"></i>
+            </a>
             <a href="https://www.linkedin.com/in/jorge-fern%C3%A1ndez-montaner-50115412b/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
               <i className="fab fa-linkedin-in"></i>
             </a>
-            <a href="mailto:jorgesfb29@gmail.com" aria-label="Email">
+            <a href="mailto:jorgesf29b@gmail.com" aria-label="Email">
               <i className="fas fa-envelope"></i>
             </a>
           </div>
@@ -89,8 +92,9 @@ const Footer = () => {
           <h4>{data.resources}</h4>
           <ul>
             <li><a href="https://github.com/jorgeF1990" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+            <li><a href="https://gitlab.com/jorgeafm" target="_blank" rel="noopener noreferrer">GitLab</a></li>
             <li><a href="https://www.linkedin.com/in/jorge-fern%C3%A1ndez-montaner-50115412b/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-            <li><a href="mailto:jorgesfb29@gmail.com">Email</a></li>
+            <li><a href="mailto:jorgesf29b@gmail.com">Email</a></li>
           </ul>
         </div>
       </div>

@@ -93,6 +93,13 @@ const Contact = () => {
             </div>
           </div>
           <div className={styles.contactItem}>
+            <i className="fab fa-gitlab"></i>
+            <div>
+              <strong>GitLab</strong>
+              <a href="https://gitlab.com/jorgeafm" target="_blank" rel="noopener noreferrer">gitlab.com/jorgeafm</a>
+            </div>
+          </div>
+          <div className={styles.contactItem}>
             <i className="fab fa-linkedin-in"></i>
             <div>
               <strong>LinkedIn</strong>

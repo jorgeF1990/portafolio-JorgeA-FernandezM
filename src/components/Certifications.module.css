@@ -1,6 +1,6 @@
 .certifications {
   margin-top: 3rem;
-  scroll-margin-top: 80px;
+  scroll-padding-top: 80px;
 }
 
 .sectionHeader {
@@ -27,8 +27,9 @@
 
 .certGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 0.8rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
 }
 
 .certItem {
@@ -36,7 +37,7 @@
   align-items: center;
   gap: 0.8rem;
   background: var(--bg-cert);
-  padding: 0.7rem 1rem;
+  padding: 0.8rem 1.2rem;
   border-radius: 1rem;
   border: 1px solid var(--border-color);
   transition: all 0.2s ease;
@@ -51,7 +52,7 @@
 }
 
 .certItem > i:first-child {
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   color: var(--primary);
   min-width: 2rem;
   text-align: center;
@@ -63,12 +64,12 @@
 
 .certName {
   font-weight: 600;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   color: var(--text-primary);
 }
 
 .certMeta {
-  font-size: 0.75rem;
+  font-size: 0.8rem;
   color: var(--text-light);
   display: flex;
   flex-wrap: wrap;
@@ -78,9 +79,9 @@
 .badge {
   background: var(--badge-bg);
   color: var(--badge-text);
-  padding: 0.05rem 0.6rem;
+  padding: 0.1rem 0.6rem;
   border-radius: 30px;
-  font-size: 0.6rem;
+  font-size: 0.65rem;
   font-weight: 600;
 }
 
@@ -100,6 +101,10 @@
   }
 
   .certName {
-    font-size: 0.8rem;
+    font-size: 0.85rem;
+  }
+
+  .certMeta {
+    font-size: 0.7rem;
   }
 }

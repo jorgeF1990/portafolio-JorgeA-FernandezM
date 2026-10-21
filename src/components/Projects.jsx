@@ -6,7 +6,8 @@ import styles from './Projects.module.css';
 const Projects = ({ openModal }) => {
   const { language } = useLanguage();
 
-  const projectKeys = ['tareasync', 'seguro', 'inventario'];
+  // DataBox primero por su relevancia e impacto
+  const projectKeys = ['databox', 'tareasync', 'seguro', 'inventario', 'actitud', 'feria'];
 
   const content = {
     es: {
@@ -30,30 +31,45 @@ const Projects = ({ openModal }) => {
   const data = content[language];
   
   const demoLinks = {
+    databox: null,
     tareasync: 'https://tareasync.vercel.app/',
     seguro: 'https://segurovehicularprimium.netlify.app/',
-    inventario: 'https://sistema-control-stock.netlify.app/'
+    inventario: 'https://sistema-control-stock.netlify.app/',
+    actitud: 'https://actitud-8ad284.gitlab.io/',
+    feria: 'https://feria-de-majo.vercel.app/'
   };
 
   const projectImages = {
+    databox: 'https://placehold.co/600x400/1e293b/ffffff?text=DataBox+BYMA',
     tareasync: 'https://i.postimg.cc/4yd5H7p6/tareas.jpg',
     seguro: 'https://i.postimg.cc/3R6y9dPm/seguro.jpg',
-    inventario: 'https://i.postimg.cc/yYRRQy6N/inventario.jpg'
+    inventario: 'https://i.postimg.cc/yYRRQy6N/inventario.jpg',
+    actitud: 'https://i.postimg.cc/XYPXVFmy/image.png',
+    feria: 'https://i.postimg.cc/BQn4zbbJ/image.png'
   };
 
-  // Función para mostrar solo 6 tecnologías
   const getDisplayTechs = (techs) => {
     if (!techs || techs.length === 0) return { display: [], remaining: 0 };
-    
     const maxDisplay = 6;
     if (techs.length <= maxDisplay) {
       return { display: techs, remaining: 0 };
     }
-    
     return {
       display: techs.slice(0, maxDisplay),
       remaining: techs.length - maxDisplay
     };
+  };
+
+  const getProjectIcon = (key) => {
+    const icons = {
+      databox: 'fa-network-wired',
+      tareasync: 'fa-tasks',
+      seguro: 'fa-car',
+      inventario: 'fa-cubes',
+      actitud: 'fa-guitar',
+      feria: 'fa-store'
+    };
+    return icons[key] || 'fa-folder-open';
   };
 
   return (
@@ -70,11 +86,7 @@ const Projects = ({ openModal }) => {
           const imageUrl = projectImages[key];
           const allTechs = project.techs || [];
           const { display, remaining } = getDisplayTechs(allTechs);
-
-          let iconClass = 'fa-solid fa-folder-open';
-          if (key === 'tareasync') iconClass = 'fa-solid fa-tasks';
-          else if (key === 'seguro') iconClass = 'fa-solid fa-car';
-          else if (key === 'inventario') iconClass = 'fa-solid fa-cubes';
+          const iconClass = getProjectIcon(key);
 
           return (
             <div key={key} className={styles.projectCard}>
@@ -85,13 +97,12 @@ const Projects = ({ openModal }) => {
                   className={styles.projectImg}
                   loading="lazy"
                   onError={(e) => {
-                    // Si la imagen falla, mostrar el icono
                     e.target.style.display = 'none';
                     e.target.parentElement.querySelector('.imageFallback').style.display = 'flex';
                   }}
                 />
                 <div className={styles.imageFallback}>
-                  <i className={`${iconClass} ${styles.placeholderIcon}`}></i>
+                  <i className={`fas ${iconClass} ${styles.placeholderIcon}`}></i>
                 </div>
               </div>
               <div className={styles.projectBody}>
@@ -102,7 +113,7 @@ const Projects = ({ openModal }) => {
                     <span key={idx}>{tech}</span>
                   ))}
                   {remaining > 0 && (
-                    <span className={styles.moreTechs}>+{remaining} más</span>
+                    <span className={styles.moreTechs}>+{remaining} mas</span>
                   )}
                 </div>
                 <div className={styles.projectActions}>

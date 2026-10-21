@@ -35,15 +35,21 @@ const Modal = ({ projectKey, onClose }) => {
   if (!data) return null;
 
   const projectImages = {
+    databox: 'https://placehold.co/600x400/1e293b/ffffff?text=DataBox+BYMA',
     tareasync: 'https://i.postimg.cc/4yd5H7p6/tareas.jpg',
     seguro: 'https://i.postimg.cc/3R6y9dPm/seguro.jpg',
-    inventario: 'https://i.postimg.cc/yYRRQy6N/inventario.jpg'
+    inventario: 'https://i.postimg.cc/yYRRQy6N/inventario.jpg',
+    actitud: 'https://i.postimg.cc/XYPXVFmy/image.png',
+    feria: 'https://i.postimg.cc/BQn4zbbJ/image.png'
   };
 
   const demoLinks = {
+    databox: null,
     tareasync: 'https://tareasync.vercel.app/',
     seguro: 'https://segurovehicularprimium.netlify.app/',
-    inventario: 'https://sistema-control-stock.netlify.app/'
+    inventario: 'https://sistema-control-stock.netlify.app/',
+    actitud: 'https://actitud-8ad284.gitlab.io/',
+    feria: 'https://feria-de-majo.vercel.app/'
   };
 
   const imageUrl = projectImages[projectKey];
@@ -86,6 +92,18 @@ const Modal = ({ projectKey, onClose }) => {
     );
   }
 
+  let backendHtml = null;
+  if (data.backend) {
+    backendHtml = (
+      <p>
+        <strong>{language === 'es' ? 'Backend API:' : 'Backend API:'}</strong>{' '}
+        <a href={`https://${data.backend}`} target="_blank" rel="noopener noreferrer" className={styles.repoLink}>
+          {data.backend}
+        </a>
+      </p>
+    );
+  }
+
   let credentialsHtml = null;
   if (data.credentials) {
     credentialsHtml = (
@@ -114,12 +132,27 @@ const Modal = ({ projectKey, onClose }) => {
         <button className={styles.modalClose} onClick={onClose}>&times;</button>
         
         {imageUrl && (
-          <a 
-            href={demoUrl} 
-            target="_blank" 
-            rel="noopener noreferrer" 
-            className={styles.modalImageLink}
-          >
+          demoUrl ? (
+            <a 
+              href={demoUrl} 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className={styles.modalImageLink}
+            >
+              <div className={styles.modalImageWrapper}>
+                <img 
+                  src={imageUrl} 
+                  alt={data.title} 
+                  className={styles.modalImage}
+                  loading="lazy"
+                />
+                <div className={styles.modalImageOverlay}>
+                  <i className="fas fa-external-link-alt"></i>
+                  <span>{language === 'es' ? 'Abrir proyecto' : 'Open project'}</span>
+                </div>
+              </div>
+            </a>
+          ) : (
             <div className={styles.modalImageWrapper}>
               <img 
                 src={imageUrl} 
@@ -127,12 +160,8 @@ const Modal = ({ projectKey, onClose }) => {
                 className={styles.modalImage}
                 loading="lazy"
               />
-              <div className={styles.modalImageOverlay}>
-                <i className="fas fa-external-link-alt"></i>
-                <span>{language === 'es' ? 'Abrir proyecto' : 'Open project'}</span>
-              </div>
             </div>
-          </a>
+          )
         )}
 
         <span className={styles.modalTag}>{data.tag}</span>
@@ -156,6 +185,7 @@ const Modal = ({ projectKey, onClose }) => {
           {credentialsHtml}
           {repoHtml}
           {demoHtml}
+          {backendHtml}
         </div>
       </div>
     </div>
