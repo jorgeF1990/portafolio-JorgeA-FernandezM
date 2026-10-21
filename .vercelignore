@@ -1,6 +1,0 @@
-# .vercelignore
-.git
-.gitignore
-README.md
-node_modules
-build
