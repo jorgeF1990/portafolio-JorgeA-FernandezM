@@ -1,5 +1,5 @@
 export const featureIcons = {
-  // TareaSync
+  // TareaSync (español)
   'CRUD de tareas': 'fa-solid fa-list-check',
   'Asignación múltiple': 'fa-solid fa-users',
   'Historial de actividad': 'fa-solid fa-clock-rotate-left',
@@ -14,6 +14,8 @@ export const featureIcons = {
   'Drag & Drop en Kanban': 'fa-solid fa-arrows-up-down',
   'Modo oscuro / claro': 'fa-solid fa-moon',
   'Silenciar notificaciones': 'fa-solid fa-volume-xmark',
+  
+  // TareaSync (inglés)
   'Task CRUD': 'fa-solid fa-list-check',
   'Multiple assignment': 'fa-solid fa-users',
   'Activity history': 'fa-solid fa-clock-rotate-left',
@@ -28,7 +30,8 @@ export const featureIcons = {
   'Drag & Drop in Kanban': 'fa-solid fa-arrows-up-down',
   'Dark / Light mode': 'fa-solid fa-moon',
   'Mute notifications': 'fa-solid fa-volume-xmark',
-  // Seguro Vehicular
+  
+  // Seguro Vehicular (español)
   'Catálogo de Servicios': 'fa-solid fa-list',
   'Búsqueda en Tiempo Real': 'fa-solid fa-magnifying-glass',
   'Centro de Siniestros Digitales': 'fa-solid fa-file-lines',
@@ -37,6 +40,8 @@ export const featureIcons = {
   'Código QR para App Móvil': 'fa-solid fa-qrcode',
   'Diseño Responsive': 'fa-solid fa-mobile-screen',
   'Interfaz Profesional': 'fa-solid fa-building',
+  
+  // Seguro Vehicular (inglés)
   'Services Catalog': 'fa-solid fa-list',
   'Real-time Search': 'fa-solid fa-magnifying-glass',
   'Digital Claims Center': 'fa-solid fa-file-lines',
@@ -45,26 +50,29 @@ export const featureIcons = {
   'QR Code for Mobile App': 'fa-solid fa-qrcode',
   'Responsive Design': 'fa-solid fa-mobile-screen',
   'Professional Interface': 'fa-solid fa-building',
-  // Sistema de Inventario
+  
+  // Sistema de Inventario (español) - CLAVES DUPLICADAS ELIMINADAS
   'Multi-empresa': 'fa-solid fa-building',
   'Gestión de Productos': 'fa-solid fa-boxes',
   'Control de Stock': 'fa-solid fa-cubes',
   'Registro de Ventas': 'fa-solid fa-cart-shopping',
   'Gestión de Pedidos': 'fa-solid fa-truck',
-  'Dashboard con KPIs': 'fa-solid fa-chart-pie',
   'Recuperación de contraseña': 'fa-solid fa-key',
   'Interfaz Responsiva': 'fa-solid fa-mobile-screen',
   'Exportación a CSV': 'fa-solid fa-file-csv',
+  
+  // Sistema de Inventario (inglés) - CLAVES DUPLICADAS ELIMINADAS
   'Multi-company': 'fa-solid fa-building',
+  'JWT Authentication': 'fa-solid fa-shield-halved',
   'Product Management': 'fa-solid fa-boxes',
   'Stock Control': 'fa-solid fa-cubes',
   'Sales Registration': 'fa-solid fa-cart-shopping',
   'Order Management': 'fa-solid fa-truck',
-  'Dashboard with KPIs': 'fa-solid fa-chart-pie',
   'Password Recovery': 'fa-solid fa-key',
   'Responsive Interface': 'fa-solid fa-mobile-screen',
   'CSV Export': 'fa-solid fa-file-csv',
-  // Actitud-Thrasher
+  
+  // Actitud-Thrasher (español)
   'Autenticación OAuth': 'fa-solid fa-google',
   'Carrito Persistente': 'fa-solid fa-cart-shopping',
   'Pagos con PayPal': 'fa-solid fa-paypal',
@@ -75,6 +83,8 @@ export const featureIcons = {
   'CI/CD con GitLab': 'fa-solid fa-code-branch',
   'Subida de Imágenes (Cloudinary)': 'fa-solid fa-cloud-upload-alt',
   'Checkout Internacional': 'fa-solid fa-globe',
+  
+  // Actitud-Thrasher (inglés)
   'OAuth Authentication': 'fa-solid fa-google',
   'Persistent Cart': 'fa-solid fa-cart-shopping',
   'PayPal Payments': 'fa-solid fa-paypal',
@@ -85,7 +95,8 @@ export const featureIcons = {
   'GitLab CI/CD': 'fa-solid fa-code-branch',
   'Image Upload (Cloudinary)': 'fa-solid fa-cloud-upload-alt',
   'International Checkout': 'fa-solid fa-globe',
-  // Feria de Majo
+  
+  // Feria de Majo (español)
   'Catálogo Interactivo': 'fa-solid fa-grid',
   'Filtros Avanzados': 'fa-solid fa-sliders-h',
   'Panel de Administración': 'fa-solid fa-chart-line',
@@ -94,8 +105,9 @@ export const featureIcons = {
   'Modal de Producto': 'fa-solid fa-window-maximize',
   'Compartir en Redes Sociales': 'fa-solid fa-share-alt',
   'Modo Oscuro/Claro': 'fa-solid fa-moon',
-  'Búsqueda en Tiempo Real': 'fa-solid fa-search',
   'Scroll Suave': 'fa-solid fa-arrow-down',
+  
+  // Feria de Majo (inglés)
   'Interactive Catalog': 'fa-solid fa-grid',
   'Advanced Filters': 'fa-solid fa-sliders-h',
   'Admin Panel': 'fa-solid fa-chart-line',
@@ -103,9 +115,9 @@ export const featureIcons = {
   'Product Modal': 'fa-solid fa-window-maximize',
   'Social Media Sharing': 'fa-solid fa-share-alt',
   'Dark/Light Mode': 'fa-solid fa-moon',
-  'Real-time Search': 'fa-solid fa-search',
   'Smooth Scroll': 'fa-solid fa-arrow-down',
-  // DataBox
+  
+  // DataBox (español)
   'Arquitectura de Microservicios': 'fa-solid fa-network-wired',
   'Apache Kafka': 'fa-solid fa-stream',
   'Eventos en Tiempo Real': 'fa-solid fa-bolt',
@@ -116,9 +128,10 @@ export const featureIcons = {
   'CI/CD & DevOps': 'fa-solid fa-code-branch',
   'Compliance Financiero (CNV)': 'fa-solid fa-balance-scale',
   'Integración con Okta': 'fa-solid fa-key',
+  
+  // DataBox (inglés)
   'Microservices Architecture': 'fa-solid fa-network-wired',
   'Real-time Events': 'fa-solid fa-bolt',
-  'JWT + OAuth 2.0 Authentication': 'fa-solid fa-shield-halved',
   'Financial Compliance (CNV)': 'fa-solid fa-balance-scale',
   'Okta Integration': 'fa-solid fa-key',
 };
