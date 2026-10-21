@@ -9,32 +9,74 @@ const Experience = () => {
     es: {
       tag: 'Experiencia',
       title: 'Experiencia Laboral',
-      position: 'IT Support · Portfolio Investment',
+      position: 'DevOps Engineer Semi-Senior (SSr.) · Portfolio Investment',
       date: 'Sep 2025 – Presente',
       details: [
-        'Administración de servidores Linux y entornos virtualizados con Proxmox, asegurando alta disponibilidad y rendimiento.',
-        'Automatización de tareas operativas mediante scripts en Python (monitoreo, respaldos, reportes), logrando una reducción del 40% en tiempos de respuesta.',
-        'Soporte y optimización de bases de datos MySQL y MongoDB, incluyendo tuning de consultas, respaldos y recuperación ante fallos.',
-        'Gestión de incidencias y mantenimiento proactivo de infraestructura IT con documentación técnica detallada.',
-        'Mantenimiento y actualización de páginas web y software interno de la empresa, asegurando su correcto funcionamiento y aplicando mejoras continuas.',
-        'Implementación y gestión de pipelines de CI/CD para automatizar despliegues y pruebas, reduciendo los tiempos de entrega y mejorando la calidad del código.',
-        'Proyecto DataBox – Sistema de Libro de Órdenes BYMA (2026): Diseño y desarrollo end-to-end de una plataforma de consumo de datos financieros en tiempo real desde BYMA. Backend en .NET 8 con 4 microservicios (KafkaConsumer, OrderBook, Reporting, ApiGateway) que consumen tópicos Kafka, persisten en PostgreSQL 16 vía Entity Framework Core, y exponen APIs REST con autenticación JWT + OAuth 2.0 contra Okta. Frontend Angular 17 standalone con Angular Material, SSE para actualización en tiempo real del libro de órdenes, y dashboard con KPIs. Infraestructura en Docker Compose para desarrollo y manifiestos Kubernetes para producción. Incluye compliance CNV y persistencia de mensajes crudos para auditoría.'
+        {
+          title: 'Arquitectura DataBox (Liderazgo Técnico):',
+          text: 'Lideré la arquitectura e implementación de la plataforma de procesamiento distribuido DataBox para el consumo de datos financieros en tiempo real de BYMA.'
+        },
+        {
+          title: 'Microservicios & Mensajería (.NET 8 + Kafka):',
+          text: 'Diseñé un ecosistema de 4 microservicios en .NET 8 (KafkaConsumer, OrderBook, Reporting, ApiGateway) con YARP, consumiendo tópicos de Apache Kafka y logrando latencias de datos < 1 segundo.'
+        },
+        {
+          title: 'Frontend en Tiempo Real (Angular 17):',
+          text: 'Desarrollé el dashboard interactivo con Angular 17 (Signals), Angular Material y SSE (Server-Sent Events) para actualización en vivo del libro de órdenes.'
+        },
+        {
+          title: 'Alta Disponibilidad y Persistencia:',
+          text: 'Implementé la persistencia en PostgreSQL 16 usando Entity Framework Core, garantizando un 99.9% de disponibilidad mediante Docker y Kubernetes (con ConfigMaps, Secrets e Ingress).'
+        },
+        {
+          title: 'Seguridad y Compliance Financiero:',
+          text: 'Aseguré la plataforma con autenticación JWT + OAuth 2.0 contra Okta, implementando auditoría de acciones sensibles y persistencia de mensajes crudos para el cumplimiento normativo de la CNV.'
+        },
+        {
+          title: 'Automatización CI/CD e Infraestructura:',
+          text: 'Diseñé el sistema de mantenimiento preventivo con Ansible playbooks (parches de Windows, gestión de Firewall, limpieza de logs) y gestioné pipelines de CI/CD para despliegues automáticos en entornos Windows/Linux.'
+        },
+        {
+          title: 'Optimización Full-Stack:',
+          text: 'Optimicé consultas en SQL Server, PostgreSQL y MySQL (reduciendo tiempos de respuesta en un 50%) y desarrollé herramientas internas con React y Node.js que aumentaron la productividad del equipo en un 30%.'
+        }
       ],
       tags: ['Linux', 'Proxmox', 'Python', 'Ansible', 'Node.js', 'MongoDB', 'MySQL', 'WordPress', 'TypeScript', 'CI/CD', 'GitLab CI', 'Render', '.NET 8', 'C#', 'Apache Kafka', 'PostgreSQL', 'Angular 17', 'Docker', 'Kubernetes', 'Okta']
     },
     en: {
       tag: 'Experience',
       title: 'Work Experience',
-      position: 'IT Support · Portfolio Investment',
+      position: 'DevOps Engineer Semi-Senior (SSr.) · Portfolio Investment',
       date: 'Sep 2025 – Present',
       details: [
-        'Administration of Linux servers and virtualized environments with Proxmox, ensuring high availability and performance.',
-        'Automation of operational tasks using Python scripts (monitoring, backups, reporting), achieving a 40% reduction in response times.',
-        'Support and optimization of MySQL and MongoDB databases, including query tuning, backups, and disaster recovery.',
-        'Incident management and proactive maintenance of IT infrastructure with detailed technical documentation.',
-        'Maintenance and updates of company websites and internal software, ensuring proper operation and implementing continuous improvements.',
-        'Implementation and management of CI/CD pipelines to automate deployments and testing, reducing delivery times and improving code quality.',
-        'DataBox Project – BYMA Order Book System (2026): End-to-end design and development of a real-time financial data consumption platform from BYMA. .NET 8 backend with 4 microservices (KafkaConsumer, OrderBook, Reporting, ApiGateway) consuming Kafka topics, persisting in PostgreSQL 16 via Entity Framework Core, and exposing REST APIs with JWT + OAuth 2.0 authentication against Okta. Angular 17 standalone frontend with Angular Material, SSE for real-time order book updates, and KPI dashboard. Docker Compose infrastructure for development and Kubernetes manifests for production. Includes CNV compliance and raw message persistence for auditing.'
+        {
+          title: 'DataBox Architecture (Technical Leadership):',
+          text: 'Led the architecture and implementation of the DataBox distributed processing platform for real-time financial data consumption from BYMA.'
+        },
+        {
+          title: 'Microservices & Messaging (.NET 8 + Kafka):',
+          text: 'Designed an ecosystem of 4 microservices in .NET 8 (KafkaConsumer, OrderBook, Reporting, ApiGateway) with YARP, consuming Apache Kafka topics and achieving data latencies < 1 second.'
+        },
+        {
+          title: 'Real-Time Frontend (Angular 17):',
+          text: 'Developed the interactive dashboard with Angular 17 (Signals), Angular Material and SSE (Server-Sent Events) for live order book updates.'
+        },
+        {
+          title: 'High Availability & Persistence:',
+          text: 'Implemented persistence in PostgreSQL 16 using Entity Framework Core, ensuring 99.9% availability through Docker and Kubernetes (with ConfigMaps, Secrets and Ingress).'
+        },
+        {
+          title: 'Security & Financial Compliance:',
+          text: 'Secured the platform with JWT + OAuth 2.0 authentication against Okta, implementing audit trails of sensitive actions and raw message persistence for CNV regulatory compliance.'
+        },
+        {
+          title: 'CI/CD Automation & Infrastructure:',
+          text: 'Designed the preventive maintenance system with Ansible playbooks (Windows patches, Firewall management, log cleanup) and managed CI/CD pipelines for automated deployments in Windows/Linux environments.'
+        },
+        {
+          title: 'Full-Stack Optimization:',
+          text: 'Optimized SQL Server, PostgreSQL and MySQL queries (reducing response times by 50%) and developed internal tools with React and Node.js that increased team productivity by 30%.'
+        }
       ],
       tags: ['Linux', 'Proxmox', 'Python', 'Ansible', 'Node.js', 'MongoDB', 'MySQL', 'WordPress', 'TypeScript', 'CI/CD', 'GitLab CI', 'Render', '.NET 8', 'C#', 'Apache Kafka', 'PostgreSQL', 'Angular 17', 'Docker', 'Kubernetes', 'Okta']
     }
@@ -56,7 +98,9 @@ const Experience = () => {
         <div className={styles.expDesc}>
           <ul>
             {data.details.map((item, index) => (
-              <li key={index}>{item}</li>
+              <li key={index}>
+                <strong>{item.title}</strong> {item.text}
+              </li>
             ))}
           </ul>
           <div className={styles.techTags}>
