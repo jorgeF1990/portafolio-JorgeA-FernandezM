@@ -147,3 +147,25 @@
     max-width: 100%;
   }
 }
+/* ... (mantén tus estilos anteriores del footer) ... */
+
+/* Agrega esto al final del archivo */
+.footerLegal {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.legalBtn {
+  background: none;
+  border: none;
+  color: var(--text-light);
+  font-size: 0.8rem;
+  cursor: pointer;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  transition: color 0.2s ease;
+}
+
+.legalBtn:hover {
+  color: var(--primary);
+}
