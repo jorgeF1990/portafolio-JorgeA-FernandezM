@@ -7,20 +7,20 @@ const Footer = () => {
 
   const content = {
     es: {
-      description: 'Full Stack Developer especializado en aplicaciones web escalables.',
+      description: 'DevOps Semi-Senior y Full Stack Developer especializado en arquitecturas escalables y microservicios.',
       nav: 'Navegación',
       resources: 'Recursos',
       privacy: 'Política de Privacidad',
       terms: 'Términos',
-      role: 'Full Stack Developer'
+      role: 'DevOps & Full Stack Developer'
     },
     en: {
-      description: 'Full Stack Developer specialized in scalable web applications.',
+      description: 'Semi-Senior DevOps & Full Stack Developer specialized in scalable architectures and microservices.',
       nav: 'Navigation',
       resources: 'Resources',
       privacy: 'Privacy Policy',
       terms: 'Terms',
-      role: 'Full Stack Developer'
+      role: 'DevOps & Full Stack Developer'
     }
   };
 
