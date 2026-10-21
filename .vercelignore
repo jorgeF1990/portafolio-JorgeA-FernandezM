@@ -1,6 +1,6 @@
+# .vercelignore
 .git
 .gitignore
 README.md
 node_modules
-src
-public
+build
