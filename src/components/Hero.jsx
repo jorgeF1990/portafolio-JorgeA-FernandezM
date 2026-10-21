@@ -7,28 +7,28 @@ const Hero = () => {
 
   const content = {
     es: {
-      tag: 'Full Stack Developer · Systems Analyst',
+      tag: 'DevOps Semi-Senior & Full Stack Developer',
       title: 'Jorge Fernández',
-      description: 'Desarrollador Full Stack con amplia experiencia en la creación de aplicaciones web y móviles escalables. Especializado en arquitecturas modernas, integración de APIs y soluciones end-to-end con tecnologías como React, Node.js, FastAPI y MongoDB.',
+      description: 'DevOps Semi-Senior y Desarrollador Full Stack. Especializado en arquitecturas distribuidas de alto rendimiento, microservicios (.NET 8, Kafka) y soluciones end-to-end con Angular 17, React, Node.js y Kubernetes.',
       btnPortfolio: 'Ver portafolio',
       btnContact: 'Contactar',
-      badge: 'Full Stack · Frontend + Backend',
+      badge: 'Full Stack & DevOps',
       stats: [
         { number: '3+', label: 'Años de experiencia' },
-        { number: '5', label: 'Proyectos' },
+        { number: '6+', label: 'Proyectos' },
         { number: '10+', label: 'APIs' },
       ]
     },
     en: {
-      tag: 'Full Stack Developer · Systems Analyst',
+      tag: 'Semi-Senior DevOps & Full Stack Developer',
       title: 'Jorge Fernández',
-      description: 'Full Stack Developer with extensive experience in building scalable web and mobile applications. Specialized in modern architectures, API integration and end-to-end solutions with technologies like React, Node.js, FastAPI and MongoDB.',
+      description: 'Semi-Senior DevOps Engineer and Full Stack Developer. Specialized in high-performance distributed architectures, microservices (.NET 8, Kafka) and end-to-end solutions with Angular 17, React, Node.js and Kubernetes.',
       btnPortfolio: 'View portfolio',
       btnContact: 'Contact',
-      badge: 'Full Stack · Frontend + Backend',
+      badge: 'Full Stack & DevOps',
       stats: [
         { number: '3+', label: 'Years experience' },
-        { number: '5', label: 'Projects' },
+        { number: '6+', label: 'Projects' },
         { number: '10+', label: 'APIs' },
       ]
     }
@@ -73,7 +73,7 @@ const Hero = () => {
             <i className="fab fa-github"></i>
           </a>
           <a href="https://gitlab.com/jorgeafm" target="_blank" rel="noopener noreferrer" aria-label="GitLab">
-            <i className="fab fa-gitlab"></i>
+            <i class="fab fa-gitlab"></i>
           </a>
           <a href="https://www.linkedin.com/in/jorge-fern%C3%A1ndez-montaner-50115412b/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
             <i className="fab fa-linkedin-in"></i>
@@ -86,7 +86,7 @@ const Hero = () => {
       <div className={styles.heroImage}>
         <div className={styles.heroBadgeLarge}>
           <i className="fas fa-code"></i>
-          <span>Full Stack</span>
+          <span>{data.badge}</span>
         </div>
         <div className={styles.heroStats}>
           {data.stats.map((stat, index) => (
