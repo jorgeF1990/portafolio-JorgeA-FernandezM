@@ -11,7 +11,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 2rem;
+  padding: 1rem; /* Reducido para móviles */
   animation: overlayIn 0.3s ease;
 }
 
@@ -24,13 +24,15 @@
   background: var(--bg-modal);
   max-width: 600px;
   width: 100%;
-  max-height: 80vh;
+  max-height: 85vh; /* Altura máxima adaptada */
   overflow-y: auto;
   border-radius: 1.5rem;
-  padding: 2.5rem;
+  padding: 2rem;
   box-shadow: 0 40px 80px -20px var(--shadow-color);
   position: relative;
   animation: modalIn 0.3s ease;
+  display: flex;
+  flex-direction: column;
 }
 
 @keyframes modalIn {
@@ -51,6 +53,9 @@
   transition: all 0.2s ease;
   line-height: 1;
   z-index: 10;
+  align-self: flex-end; /* Mejor alineación */
+  margin-top: -0.5rem;
+  margin-right: -0.5rem;
 }
 
 .modalClose:hover {
@@ -59,17 +64,19 @@
 }
 
 .modalTitle {
-  font-size: 1.6rem;
-  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
   color: var(--text-primary);
   border-bottom: 2px solid var(--border-color);
   padding-bottom: 0.8rem;
+  padding-right: 2rem; /* Espacio para el botón de cerrar */
 }
 
 .modalBody {
   color: var(--text-secondary);
   font-size: 0.95rem;
-  line-height: 1.8;
+  line-height: 1.7;
+  overflow-y: auto; /* Permite scroll interno si es necesario */
 }
 
 .modalBody p {
@@ -83,4 +90,34 @@
 .modalBody em {
   color: var(--text-light);
   font-size: 0.85rem;
+}
+
+/* ===== RESPONSIVE PARA MÓVILES ===== */
+@media (max-width: 480px) {
+  .modalOverlay {
+    padding: 0.5rem; /* Menos margen exterior en pantallas pequeñas */
+    align-items: flex-end; /* El modal se pega un poco abajo */
+  }
+
+  .modalContent {
+    padding: 1.5rem 1.2rem;
+    border-radius: 1.2rem 1.2rem 0 0; /* Estilo de "hoja inferior" (Bottom Sheet) */
+    max-height: 90vh; /* Ocupa casi toda la pantalla */
+    width: 100%;
+    margin-bottom: 0;
+  }
+
+  .modalTitle {
+    font-size: 1.3rem;
+  }
+
+  .modalBody {
+    font-size: 0.9rem;
+  }
+
+  .modalClose {
+    font-size: 1.6rem;
+    margin-top: -0.2rem;
+    margin-right: -0.2rem;
+  }
 }
