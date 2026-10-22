@@ -1,12 +1,12 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useLanguage } from '../contexts/LanguageContext';
 import { projectData } from '../data/projectData';
 import styles from './Projects.module.css';
 
 const Projects = ({ openModal }) => {
   const { language } = useLanguage();
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
-  // DataBox primero por su relevancia e impacto
   const projectKeys = ['databox', 'tareasync', 'seguro', 'inventario', 'actitud', 'feria'];
 
   const content = {
@@ -39,14 +39,27 @@ const Projects = ({ openModal }) => {
     feria: 'https://feria-de-majo.vercel.app/'
   };
 
+  // Agregamos las dos imágenes de DataBox en un array
   const projectImages = {
-    databox: 'https://placehold.co/600x400/1e293b/ffffff?text=DataBox+BYMA',
-    tareasync: 'https://i.postimg.cc/4yd5H7p6/tareas.jpg',
-    seguro: 'https://i.postimg.cc/3R6y9dPm/seguro.jpg',
-    inventario: 'https://i.postimg.cc/yYRRQy6N/inventario.jpg',
-    actitud: 'https://i.postimg.cc/XYPXVFmy/image.png',
-    feria: 'https://i.postimg.cc/BQn4zbbJ/image.png'
+    databox: [
+      'https://i.postimg.cc/q7d4kw6x/Captura-de-pantalla-2026-10-21-212921.png', // Modo Oscuro
+      'https://i.postimg.cc/0Qn8XSQG/Captura-de-pantalla-2026-10-21-212840.png'  // Modo Claro
+    ],
+    tareasync: ['https://i.postimg.cc/4yd5H7p6/tareas.jpg'],
+    seguro: ['https://i.postimg.cc/3R6y9dPm/seguro.jpg'],
+    inventario: ['https://i.postimg.cc/yYRRQy6N/inventario.jpg'],
+    actitud: ['https://i.postimg.cc/XYPXVFmy/image.png'],
+    feria: ['https://i.postimg.cc/BQn4zbbJ/image.png']
   };
+
+  // Efecto para el carrusel automático
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % 2); // Cambia entre 0 y 1
+    }, 3000); // Cambia cada 3 segundos
+
+    return () => clearInterval(interval); // Limpia el intervalo al desmontar
+  }, []);
 
   const getDisplayTechs = (techs) => {
     if (!techs || techs.length === 0) return { display: [], remaining: 0 };
@@ -83,7 +96,11 @@ const Projects = ({ openModal }) => {
         {projectKeys.map((key) => {
           const project = projectData[key][language];
           const demoLink = demoLinks[key];
-          const imageUrl = projectImages[key];
+          
+          // Lógica para seleccionar la imagen correcta del array
+          const images = projectImages[key];
+          const imageUrl = images[currentImageIndex % images.length]; 
+          
           const allTechs = project.techs || [];
           const { display, remaining } = getDisplayTechs(allTechs);
           const iconClass = getProjectIcon(key);
