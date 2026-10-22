@@ -39,11 +39,10 @@ const Projects = ({ openModal }) => {
     feria: 'https://feria-de-majo.vercel.app/'
   };
 
-  // Agregamos las dos imágenes de DataBox en un array
   const projectImages = {
     databox: [
-      'https://i.postimg.cc/q7d4kw6x/Captura-de-pantalla-2026-10-21-212921.png', // Modo Oscuro
-      'https://i.postimg.cc/0Qn8XSQG/Captura-de-pantalla-2026-10-21-212840.png'  // Modo Claro
+      'https://i.postimg.cc/q7d4kw6x/Captura-de-pantalla-2026-10-21-212921.png',
+      'https://i.postimg.cc/0Qn8XSQG/Captura-de-pantalla-2026-10-21-212840.png'
     ],
     tareasync: ['https://i.postimg.cc/4yd5H7p6/tareas.jpg'],
     seguro: ['https://i.postimg.cc/3R6y9dPm/seguro.jpg'],
@@ -52,13 +51,12 @@ const Projects = ({ openModal }) => {
     feria: ['https://i.postimg.cc/BQn4zbbJ/image.png']
   };
 
-  // Efecto para el carrusel automático
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % 2); // Cambia entre 0 y 1
-    }, 3000); // Cambia cada 3 segundos
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % 2);
+    }, 3000);
 
-    return () => clearInterval(interval); // Limpia el intervalo al desmontar
+    return () => clearInterval(interval);
   }, []);
 
   const getDisplayTechs = (techs) => {
@@ -97,7 +95,6 @@ const Projects = ({ openModal }) => {
           const project = projectData[key][language];
           const demoLink = demoLinks[key];
           
-          // Lógica para seleccionar la imagen correcta del array
           const images = projectImages[key];
           const imageUrl = images[currentImageIndex % images.length]; 
           
