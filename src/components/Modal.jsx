@@ -34,8 +34,9 @@ const Modal = ({ projectKey, onClose }) => {
   const data = projectData[projectKey]?.[language];
   if (!data) return null;
 
+  // Mapeo exacto de las imágenes
   const projectImages = {
-    databox: 'https://placehold.co/600x400/1e293b/ffffff?text=DataBox+BYMA',
+    databox: 'https://i.postimg.cc/q7d4kw6x/Captura-de-pantalla-2026-10-21-212921.png', // Imagen del modo oscuro
     tareasync: 'https://i.postimg.cc/4yd5H7p6/tareas.jpg',
     seguro: 'https://i.postimg.cc/3R6y9dPm/seguro.jpg',
     inventario: 'https://i.postimg.cc/yYRRQy6N/inventario.jpg',
