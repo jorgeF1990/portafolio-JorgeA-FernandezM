@@ -1,10 +1,11 @@
 .services {
-  margin-top: 3rem;
+  margin: 3rem auto 0 auto; /* auto a los lados fuerza el centrado */
   scroll-margin-top: 80px;
   width: 100%;
+  max-width: 100%; /* Se adapta al contenedor padre */
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: center; /* Centra todo el contenido interno */
 }
 
 .sectionHeader {
@@ -38,12 +39,14 @@
   margin: 0 auto;
 }
 
+/* GRID DE SERVICIOS */
 .servicesGrid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 1.5rem;
   width: 100%;
   max-width: 1000px;
+  margin: 0 auto; /* Asegura que el grid se centre */
 }
 
 .serviceItem {
@@ -117,17 +120,24 @@
   gap: 0.8rem;
 }
 
+/* =========================================
+   MEDIA QUERIES (Móviles)
+   ========================================= */
 @media (max-width: 768px) {
+  .services {
+    width: 100%;
+  }
+
   .servicesGrid {
     grid-template-columns: 1fr;
     gap: 1.2rem;
-    padding: 0 1rem;
-    box-sizing: border-box; 
+    width: 100%;
+    padding: 0; /* Quitamos el padding extra aquí para que lo maneje el contenedor padre */
   }
 
   .serviceItem {
     width: 100%;
-    padding: 1.5rem 1rem;
+    box-sizing: border-box; /* Crucial para que el padding no desborde el ancho */
   }
 }
 
@@ -150,7 +160,7 @@
    ========================================= */
 .serviceModalOverlay {
   position: fixed;
-  inset: 0; /* Corrige el desplazamiento cubriendo los 4 bordes */
+  inset: 0;
   width: 100%;
   height: 100%;
   background: rgba(11, 27, 47, 0.75);
@@ -176,6 +186,7 @@
   max-height: 90vh;
   overflow-y: auto;
   animation: modalIn 0.3s ease;
+  box-sizing: border-box;
 }
 
 @keyframes modalIn {
