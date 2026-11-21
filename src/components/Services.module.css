@@ -1,12 +1,16 @@
 .services {
   margin-top: 3rem;
   scroll-margin-top: 80px;
-  padding: 0 0.5rem; /* Margen de seguridad para móviles */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .sectionHeader {
   text-align: center;
   margin-bottom: 2.5rem;
+  width: 100%;
   padding: 0 1rem;
 }
 
@@ -30,13 +34,16 @@
 .sectionDesc {
   color: var(--text-muted);
   font-size: 1.05rem;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 .servicesGrid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 1.5rem;
-  padding: 0 1rem; /* Evita que las tarjetas toquen los bordes */
+  width: 100%;
+  max-width: 1000px;
 }
 
 .serviceItem {
@@ -44,12 +51,11 @@
   padding: 2rem 1.5rem;
   border-radius: 1.5rem;
   border: 1px solid var(--border-color);
-  text-align: center; /* Centra el texto dentro de la tarjeta */
   transition: all 0.3s ease;
   display: flex;
   flex-direction: column;
-  align-items: center; /* Centra los elementos (icono, botón) horizontalmente */
-  justify-content: space-between;
+  align-items: center; 
+  text-align: center;
 }
 
 .serviceItem:hover {
@@ -64,7 +70,7 @@
   justify-content: center;
   width: 56px;
   height: 56px;
-  margin: 0 auto 1rem;
+  margin-bottom: 1rem;
   background: var(--primary-light);
   border-radius: 14px;
   font-size: 1.5rem;
@@ -82,15 +88,13 @@
   font-size: 1.1rem;
   color: var(--text-primary);
   margin-bottom: 0.5rem;
-  text-align: center;
 }
 
 .serviceItem p {
   font-size: 0.9rem;
   color: var(--text-muted);
   margin-bottom: 1rem;
-  text-align: center;
-  flex-grow: 1; /* Hace que el texto ocupe el espacio disponible */
+  flex-grow: 1;
 }
 
 .serviceLink {
@@ -106,34 +110,24 @@
   border: none;
   cursor: pointer;
   font-family: 'Inter', sans-serif;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 0;
 }
 
 .serviceLink:hover {
   gap: 0.8rem;
 }
 
-/* =========================================
-   MEDIA QUERIES (Móviles y Tablets)
-   ========================================= */
-
 @media (max-width: 768px) {
-  .services {
-    padding: 0 1rem; /* Más margen en tablets */
-  }
-
   .servicesGrid {
-    grid-template-columns: 1fr; /* Una sola columna en móviles */
+    grid-template-columns: 1fr;
     gap: 1.2rem;
-    padding: 0;
+    padding: 0 1rem;
+    box-sizing: border-box; 
   }
 
   .serviceItem {
-    padding: 1.5rem 1.2rem; /* Un poco menos de padding para aprovechar el espacio */
-  }
-
-  .serviceItem p {
-    font-size: 0.95rem; /* Texto ligeramente más grande para leer mejor en celular */
+    width: 100%;
+    padding: 1.5rem 1rem;
   }
 }
 
@@ -152,28 +146,22 @@
 }
 
 /* =========================================
-   MODAL (Ya estaba en tu código)
+   MODAL
    ========================================= */
 .serviceModalOverlay {
   position: fixed;
-  top: 0;
-  left: 0;
+  inset: 0; /* Corrige el desplazamiento cubriendo los 4 bordes */
   width: 100%;
   height: 100%;
-  background: rgba(11, 27, 47, 0.6);
+  background: rgba(11, 27, 47, 0.75);
   -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
-  z-index: 1000;
+  z-index: 9999;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 1rem; /* Reducido para móviles */
-  animation: overlayIn 0.3s ease;
-}
-
-@keyframes overlayIn {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
+  padding: 1rem;
+  box-sizing: border-box;
 }
 
 .serviceModalContent {
@@ -184,8 +172,10 @@
   padding: 2rem;
   box-shadow: 0 40px 80px -20px var(--shadow-color);
   position: relative;
-  animation: modalIn 0.3s ease;
   text-align: center;
+  max-height: 90vh;
+  overflow-y: auto;
+  animation: modalIn 0.3s ease;
 }
 
 @keyframes modalIn {
@@ -270,23 +260,20 @@
 }
 
 @media (max-width: 480px) {
-  .serviceModalContent {
-    padding: 1.5rem;
-    margin: 1rem;
-    max-height: 90vh; /* Evita que el modal se salga de la pantalla en celulares */
-    overflow-y: auto;
+  .serviceModalOverlay {
+    padding: 0.5rem;
   }
 
-  .serviceModalIcon {
-    width: 48px;
-    height: 48px;
-    font-size: 1.4rem;
+  .serviceModalContent {
+    padding: 1.5rem 1rem;
+    border-radius: 1rem;
+    max-height: 95vh;
   }
 
   .serviceModalContent h3 {
     font-size: 1.2rem;
   }
-
+  
   .serviceModalDescription {
     font-size: 0.85rem;
   }
