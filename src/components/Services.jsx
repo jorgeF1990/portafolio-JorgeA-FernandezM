@@ -33,8 +33,8 @@ const Services = () => {
           icon: 'fa-solid fa-infinity',
           title: 'DevOps & Cloud',
           description: 'Automatización de despliegues, CI/CD y orquestación de contenedores.',
-          details: 'Implemento pipelines de CI/CD (GitLab CI) con análisis estático (SonarQube), detección de secretos y pruebas automatizadas (unitarias/integración). Gestiono contenedores con Docker y OpenShift/Kubernetes, y despliego infraestructura en Azure y AWS.',
-          technologies: ['Docker', 'Kubernetes', 'OpenShift', 'Azure', 'AWS', 'GitLab CI/CD', 'SonarQube', 'Ansible']
+          details: 'Implemento pipelines de CI/CD (GitLab CI) con análisis estático (SonarQube), detección de secretos y pruebas automatizadas (unitarias/integración). Gestiono contenedores con Docker y OpenShift/Kubernetes, y despliego infraestructura y aplicaciones en Azure, AWS, Vercel y Render.',
+          technologies: ['Docker', 'Kubernetes', 'OpenShift', 'Azure', 'AWS', 'Vercel', 'Render', 'GitLab CI/CD', 'SonarQube', 'Ansible']
         },
         {
           id: 'data',
@@ -72,8 +72,8 @@ const Services = () => {
           icon: 'fa-solid fa-infinity',
           title: 'DevOps & Cloud',
           description: 'Deployment automation, CI/CD and container orchestration.',
-          details: 'I implement CI/CD pipelines (GitLab CI) with static analysis (SonarQube), secret detection, and automated testing (unit/integration). I manage containers with Docker and OpenShift/Kubernetes, and deploy infrastructure on Azure and AWS.',
-          technologies: ['Docker', 'Kubernetes', 'OpenShift', 'Azure', 'AWS', 'GitLab CI/CD', 'SonarQube', 'Ansible']
+          details: 'I implement CI/CD pipelines (GitLab CI) with static analysis (SonarQube), secret detection, and automated testing (unit/integration). I manage containers with Docker and OpenShift/Kubernetes, and deploy infrastructure and applications on Azure, AWS, Vercel, and Render.',
+          technologies: ['Docker', 'Kubernetes', 'OpenShift', 'Azure', 'AWS', 'Vercel', 'Render', 'GitLab CI/CD', 'SonarQube', 'Ansible']
         },
         {
           id: 'data',

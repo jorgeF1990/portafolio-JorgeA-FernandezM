@@ -14,6 +14,7 @@ export const featureIcons = {
   'Drag & Drop en Kanban': 'fa-solid fa-arrows-up-down',
   'Modo oscuro / claro': 'fa-solid fa-moon',
   'Silenciar notificaciones': 'fa-solid fa-volume-xmark',
+  'Despliegue en Vercel': 'fa-solid fa-rocket',
   
   // TareaSync (inglés)
   'Task CRUD': 'fa-solid fa-list-check',
@@ -30,6 +31,7 @@ export const featureIcons = {
   'Drag & Drop in Kanban': 'fa-solid fa-arrows-up-down',
   'Dark / Light mode': 'fa-solid fa-moon',
   'Mute notifications': 'fa-solid fa-volume-xmark',
+  'Vercel Deployment': 'fa-solid fa-rocket',
   
   // Seguro Vehicular (español)
   'Catálogo de Servicios': 'fa-solid fa-list',
@@ -40,6 +42,7 @@ export const featureIcons = {
   'Código QR para App Móvil': 'fa-solid fa-qrcode',
   'Diseño Responsive': 'fa-solid fa-mobile-screen',
   'Interfaz Profesional': 'fa-solid fa-building',
+  'Despliegue en Netlify': 'fa-solid fa-rocket',
   
   // Seguro Vehicular (inglés)
   'Services Catalog': 'fa-solid fa-list',
@@ -50,8 +53,9 @@ export const featureIcons = {
   'QR Code for Mobile App': 'fa-solid fa-qrcode',
   'Responsive Design': 'fa-solid fa-mobile-screen',
   'Professional Interface': 'fa-solid fa-building',
+  'Netlify Deployment': 'fa-solid fa-rocket',
   
-  // Sistema de Inventario (español) - CLAVES DUPLICADAS ELIMINADAS
+  // Sistema de Inventario (español)
   'Multi-empresa': 'fa-solid fa-building',
   'Gestión de Productos': 'fa-solid fa-boxes',
   'Control de Stock': 'fa-solid fa-cubes',
@@ -60,8 +64,9 @@ export const featureIcons = {
   'Recuperación de contraseña': 'fa-solid fa-key',
   'Interfaz Responsiva': 'fa-solid fa-mobile-screen',
   'Exportación a CSV': 'fa-solid fa-file-csv',
+  'Despliegue en Netlify': 'fa-solid fa-rocket',
   
-  // Sistema de Inventario (inglés) - CLAVES DUPLICADAS ELIMINADAS
+  // Sistema de Inventario (inglés)
   'Multi-company': 'fa-solid fa-building',
   'JWT Authentication': 'fa-solid fa-shield-halved',
   'Product Management': 'fa-solid fa-boxes',
@@ -71,6 +76,7 @@ export const featureIcons = {
   'Password Recovery': 'fa-solid fa-key',
   'Responsive Interface': 'fa-solid fa-mobile-screen',
   'CSV Export': 'fa-solid fa-file-csv',
+  'Netlify Deployment': 'fa-solid fa-rocket',
   
   // Actitud-Thrasher (español)
   'Autenticación OAuth': 'fa-solid fa-google',
@@ -83,6 +89,8 @@ export const featureIcons = {
   'CI/CD con GitLab': 'fa-solid fa-code-branch',
   'Subida de Imágenes (Cloudinary)': 'fa-solid fa-cloud-upload-alt',
   'Checkout Internacional': 'fa-solid fa-globe',
+  'Despliegue Frontend en GitLab Pages': 'fa-solid fa-rocket',
+  'Backend en Render': 'fa-solid fa-cloud-upload-alt',
   
   // Actitud-Thrasher (inglés)
   'OAuth Authentication': 'fa-solid fa-google',
@@ -95,6 +103,8 @@ export const featureIcons = {
   'GitLab CI/CD': 'fa-solid fa-code-branch',
   'Image Upload (Cloudinary)': 'fa-solid fa-cloud-upload-alt',
   'International Checkout': 'fa-solid fa-globe',
+  'Frontend Deployment on GitLab Pages': 'fa-solid fa-rocket',
+  'Backend on Render': 'fa-solid fa-cloud-upload-alt',
   
   // Feria de Majo (español)
   'Catálogo Interactivo': 'fa-solid fa-grid',
@@ -106,6 +116,8 @@ export const featureIcons = {
   'Compartir en Redes Sociales': 'fa-solid fa-share-alt',
   'Modo Oscuro/Claro': 'fa-solid fa-moon',
   'Scroll Suave': 'fa-solid fa-arrow-down',
+  'Despliegue Frontend en Vercel': 'fa-solid fa-rocket',
+  'Backend en Render': 'fa-solid fa-cloud-upload-alt',
   
   // Feria de Majo (inglés)
   'Interactive Catalog': 'fa-solid fa-grid',
@@ -116,6 +128,8 @@ export const featureIcons = {
   'Social Media Sharing': 'fa-solid fa-share-alt',
   'Dark/Light Mode': 'fa-solid fa-moon',
   'Smooth Scroll': 'fa-solid fa-arrow-down',
+  'Frontend Deployment on Vercel': 'fa-solid fa-rocket',
+  'Backend on Render': 'fa-solid fa-cloud-upload-alt',
   
   // DataBox (español)
   'Arquitectura de Microservicios': 'fa-solid fa-network-wired',
@@ -152,16 +166,17 @@ export const projectData = {
       title: 'TareaSync - Gestor de Tareas',
       tag: 'Full Stack',
       meta: 'Demo: tareasync.vercel.app',
-      description: 'TareaSync es una aplicación web full-stack para la gestión de tareas entre usuarios y administradores. Permite crear, asignar y hacer seguimiento de tareas con notificaciones por correo en tiempo real.',
+      description: 'TareaSync es una aplicación web full-stack para la gestión de tareas entre usuarios y administradores. Permite crear, asignar y hacer seguimiento de tareas con notificaciones por correo en tiempo real. Desplegada en Vercel.',
       features: [
         'CRUD de tareas', 'Asignación múltiple', 'Historial de actividad',
         'Adjuntar imágenes', 'Notificaciones por correo', 'Recordatorios automáticos',
         'Control de lectura', 'Autenticación JWT', 'Recurrencia de tareas',
         'Vistas: Lista, Kanban, Calendario', 'Dashboard con KPIs',
-        'Drag & Drop en Kanban', 'Modo oscuro / claro', 'Silenciar notificaciones'
+        'Drag & Drop en Kanban', 'Modo oscuro / claro', 'Silenciar notificaciones',
+        'Despliegue en Vercel'
       ],
       techs: ['React 18', 'Node.js', 'Express', 'MongoDB', 'Mongoose', 'Multer', 'Nodemailer', 'JWT',
-        'node-cron', 'Vite', 'Axios', 'react-big-calendar', 'Lucide React', 'jwt-decode'
+        'node-cron', 'Vite', 'Axios', 'react-big-calendar', 'Lucide React', 'jwt-decode', 'Vercel'
       ],
       repo: 'github.com/jorgeF1990/gestor_de_tarea',
       demo: 'tareasync.vercel.app',
@@ -174,16 +189,17 @@ export const projectData = {
       title: 'TareaSync - Task Manager',
       tag: 'Full Stack',
       meta: 'Demo: tareasync.vercel.app',
-      description: 'TareaSync is a full-stack web application for task management between users and administrators. It allows creating, assigning and tracking tasks with real-time email notifications.',
+      description: 'TareaSync is a full-stack web application for task management between users and administrators. It allows creating, assigning and tracking tasks with real-time email notifications. Deployed on Vercel.',
       features: [
         'Task CRUD', 'Multiple assignment', 'Activity history',
         'Attach images', 'Email notifications', 'Automatic reminders',
         'Read control', 'JWT authentication', 'Task recurrence',
         'Views: List, Kanban, Calendar', 'Dashboard with KPIs',
-        'Drag & Drop in Kanban', 'Dark / Light mode', 'Mute notifications'
+        'Drag & Drop in Kanban', 'Dark / Light mode', 'Mute notifications',
+        'Vercel Deployment'
       ],
       techs: ['React 18', 'Node.js', 'Express', 'MongoDB', 'Mongoose', 'Multer', 'Nodemailer', 'JWT',
-        'node-cron', 'Vite', 'Axios', 'react-big-calendar', 'Lucide React', 'jwt-decode'
+        'node-cron', 'Vite', 'Axios', 'react-big-calendar', 'Lucide React', 'jwt-decode', 'Vercel'
       ],
       repo: 'github.com/jorgeF1990/gestor_de_tarea',
       demo: 'tareasync.vercel.app',
@@ -198,14 +214,14 @@ export const projectData = {
       title: 'Seguro Vehicular Premium',
       tag: 'Frontend',
       meta: 'Demo: segurovehicularprimium.netlify.app',
-      description: 'Seguro Vehicular Premium es una plataforma digital diseñada para ofrecer una experiencia completa en la gestión de seguros de automóviles. Permite a los usuarios explorar diferentes coberturas, acceder a asistencia vial, gestionar siniestros y descargar documentación importante de manera ágil y profesional.',
+      description: 'Seguro Vehicular Premium es una plataforma digital diseñada para ofrecer una experiencia completa en la gestión de seguros de automóviles. Permite a los usuarios explorar diferentes coberturas, acceder a asistencia vial, gestionar siniestros y descargar documentación importante de manera ágil y profesional. Desplegada en Netlify.',
       features: [
         'Catálogo de Servicios', 'Búsqueda en Tiempo Real',
         'Centro de Siniestros Digitales', 'Asistencia Vial 24/7',
         'Descarga de Pólizas', 'Código QR para App Móvil',
-        'Diseño Responsive', 'Interfaz Profesional'
+        'Diseño Responsive', 'Interfaz Profesional', 'Despliegue en Netlify'
       ],
-      techs: ['HTML5', 'CSS3', 'JavaScript (ES6+)', 'Font Awesome 6', 'Google Fonts (Inter)'],
+      techs: ['HTML5', 'CSS3', 'JavaScript (ES6+)', 'Font Awesome 6', 'Google Fonts (Inter)', 'Netlify'],
       repo: 'github.com/jorgeF1990/segurovehivularprimium',
       demo: 'segurovehicularprimium.netlify.app'
     },
@@ -213,14 +229,14 @@ export const projectData = {
       title: 'Premium Vehicle Insurance',
       tag: 'Frontend',
       meta: 'Demo: segurovehicularprimium.netlify.app',
-      description: 'Premium Vehicle Insurance is a digital platform designed to offer a complete experience in managing car insurance. It allows users to explore different coverages, access roadside assistance, manage claims and download important documentation quickly and professionally.',
+      description: 'Premium Vehicle Insurance is a digital platform designed to offer a complete experience in managing car insurance. It allows users to explore different coverages, access roadside assistance, manage claims and download important documentation quickly and professionally. Deployed on Netlify.',
       features: [
         'Services Catalog', 'Real-time Search',
         'Digital Claims Center', '24/7 Roadside Assistance',
         'Policy Download', 'QR Code for Mobile App',
-        'Responsive Design', 'Professional Interface'
+        'Responsive Design', 'Professional Interface', 'Netlify Deployment'
       ],
-      techs: ['HTML5', 'CSS3', 'JavaScript (ES6+)', 'Font Awesome 6', 'Google Fonts (Inter)'],
+      techs: ['HTML5', 'CSS3', 'JavaScript (ES6+)', 'Font Awesome 6', 'Google Fonts (Inter)', 'Netlify'],
       repo: 'github.com/jorgeF1990/segurovehivularprimium',
       demo: 'segurovehicularprimium.netlify.app'
     }
@@ -230,14 +246,14 @@ export const projectData = {
       title: 'Sistema de Control de Stock',
       tag: 'Full Stack',
       meta: 'Demo: sistema-control-stock.netlify.app',
-      description: 'Sistema profesional de gestión de inventario multi-empresa con autenticación, dashboards en tiempo real y API REST. Permite gestionar productos, ventas, pedidos y proveedores con control de stock y alertas.',
+      description: 'Sistema profesional de gestión de inventario multi-empresa con autenticación, dashboards en tiempo real y API REST. Permite gestionar productos, ventas, pedidos y proveedores con control de stock y alertas. Desplegado en Netlify.',
       features: [
         'Multi-empresa', 'Autenticación JWT', 'Gestión de Productos',
         'Control de Stock', 'Registro de Ventas', 'Gestión de Pedidos',
         'Dashboard con KPIs', 'Recuperación de contraseña',
-        'Interfaz Responsiva', 'Exportación a CSV'
+        'Interfaz Responsiva', 'Exportación a CSV', 'Despliegue en Netlify'
       ],
-      techs: ['React 18', 'FastAPI', 'MySQL', 'JWT', 'Bcrypt', 'Material-UI', 'Chart.js', 'Vite', 'Axios'],
+      techs: ['React 18', 'FastAPI', 'MySQL', 'JWT', 'Bcrypt', 'Material-UI', 'Chart.js', 'Vite', 'Axios', 'Netlify'],
       repo: 'github.com/jorgeF1990/sistema_de_inventario',
       demo: 'sistema-control-stock.netlify.app',
       credentials: {
@@ -249,14 +265,14 @@ export const projectData = {
       title: 'Stock Control System',
       tag: 'Full Stack',
       meta: 'Demo: sistema-control-stock.netlify.app',
-      description: 'Professional multi-company inventory management system with authentication, real-time dashboards and REST API. Allows managing products, sales, orders and suppliers with stock control and alerts.',
+      description: 'Professional multi-company inventory management system with authentication, real-time dashboards and REST API. Allows managing products, sales, orders and suppliers with stock control and alerts. Deployed on Netlify.',
       features: [
         'Multi-company', 'JWT Authentication', 'Product Management',
         'Stock Control', 'Sales Registration', 'Order Management',
         'Dashboard with KPIs', 'Password Recovery',
-        'Responsive Interface', 'CSV Export'
+        'Responsive Interface', 'CSV Export', 'Netlify Deployment'
       ],
-      techs: ['React 18', 'FastAPI', 'MySQL', 'JWT', 'Bcrypt', 'Material-UI', 'Chart.js', 'Vite', 'Axios'],
+      techs: ['React 18', 'FastAPI', 'MySQL', 'JWT', 'Bcrypt', 'Material-UI', 'Chart.js', 'Vite', 'Axios', 'Netlify'],
       repo: 'github.com/jorgeF1990/sistema_de_inventario',
       demo: 'sistema-control-stock.netlify.app',
       credentials: {
@@ -270,16 +286,16 @@ export const projectData = {
       title: 'Actitud-Thrasher - E-commerce de Merchandising',
       tag: 'Full Stack',
       meta: 'Demo: actitud-8ad284.gitlab.io',
-      description: 'Tienda en línea especializada en merchandising de thrash metal. Ofrece una experiencia de compra completa con gestión de productos, carrito de compras, sistema de pagos con PayPal, descuentos personalizados y panel de administración. Diseñada para la comunidad metalera con envíos internacionales.',
+      description: 'Tienda en línea especializada en merchandising de thrash metal. Ofrece una experiencia de compra completa con gestión de productos, carrito de compras, sistema de pagos con PayPal, descuentos personalizados y panel de administración. Frontend desplegado en GitLab Pages y Backend en Render.',
       features: [
         'Autenticación OAuth', 'Carrito Persistente', 'Pagos con PayPal',
         'Descuentos Personalizados', 'Dashboard Admin', 'Notificaciones por Email',
         'Newsletter Automática', 'CI/CD con GitLab', 'Subida de Imágenes (Cloudinary)',
-        'Checkout Internacional'
+        'Checkout Internacional', 'Despliegue Frontend en GitLab Pages', 'Backend en Render'
       ],
       techs: ['React 19', 'Vite 7', 'Node.js 20', 'Express 5', 'MongoDB Atlas', 'Mongoose 8',
         'JWT', 'Passport', 'Cloudinary', 'Multer', 'PayPal SDK', 'Nodemailer',
-        'Bootstrap 5', 'GitLab CI/CD', 'Render'
+        'Bootstrap 5', 'GitLab CI/CD', 'GitLab Pages', 'Render'
       ],
       repo: 'gitlab.com/jorgeafm/actitud',
       demo: 'actitud-8ad284.gitlab.io',
@@ -289,16 +305,16 @@ export const projectData = {
       title: 'Actitud-Thrasher - E-commerce of Merchandising',
       tag: 'Full Stack',
       meta: 'Demo: actitud-8ad284.gitlab.io',
-      description: 'Online store specialized in thrash metal merchandising. Offers a complete shopping experience with product management, shopping cart, PayPal payment system, custom discounts and admin panel. Designed for the metal community with international shipping.',
+      description: 'Online store specialized in thrash metal merchandising. Offers a complete shopping experience with product management, shopping cart, PayPal payment system, custom discounts and admin panel. Frontend deployed on GitLab Pages and Backend on Render.',
       features: [
         'OAuth Authentication', 'Persistent Cart', 'PayPal Payments',
         'Custom Discounts', 'Admin Dashboard', 'Email Notifications',
         'Automatic Newsletter', 'GitLab CI/CD', 'Image Upload (Cloudinary)',
-        'International Checkout'
+        'International Checkout', 'Frontend Deployment on GitLab Pages', 'Backend on Render'
       ],
       techs: ['React 19', 'Vite 7', 'Node.js 20', 'Express 5', 'MongoDB Atlas', 'Mongoose 8',
         'JWT', 'Passport', 'Cloudinary', 'Multer', 'PayPal SDK', 'Nodemailer',
-        'Bootstrap 5', 'GitLab CI/CD', 'Render'
+        'Bootstrap 5', 'GitLab CI/CD', 'GitLab Pages', 'Render'
       ],
       repo: 'gitlab.com/jorgeafm/actitud',
       demo: 'actitud-8ad284.gitlab.io',
@@ -310,18 +326,20 @@ export const projectData = {
       title: 'Feria de Majo - Catálogo de Indumentaria Artesanal',
       tag: 'Full Stack',
       meta: 'Demo: feria-de-majo.vercel.app',
-      description: 'Catálogo digital para una feria de indumentaria artesanal y de segunda mano. Permite a los organizadores exhibir prendas de vestir, gestionar su disponibilidad y permitir a los visitantes explorar el catálogo fácilmente desde cualquier dispositivo. Incluye panel de administración para gestionar productos, imágenes y estados de disponibilidad.',
+      description: 'Catálogo digital para una feria de indumentaria artesanal y de segunda mano. Permite a los organizadores exhibir prendas de vestir, gestionar su disponibilidad y permitir a los visitantes explorar el catálogo fácilmente desde cualquier dispositivo. Frontend desplegado en Vercel y Backend en Render.',
       features: [
         'Catálogo Interactivo', 'Filtros Avanzados', 'Autenticación JWT',
         'Panel de Administración', 'Carga de Imágenes (Cloudinary)', 'Carrusel de Imágenes',
         'Modal de Producto', 'Compartir en Redes Sociales', 'Diseño Responsive',
-        'Modo Oscuro/Claro', 'Búsqueda en Tiempo Real', 'Scroll Suave'
+        'Modo Oscuro/Claro', 'Búsqueda en Tiempo Real', 'Scroll Suave',
+        'Despliegue Frontend en Vercel', 'Backend en Render'
       ],
       techs: ['React 18', 'Vite 4.5', 'Tailwind CSS 3.3.5', 'React Router DOM 6.20',
         'Axios 1.6.2', 'React Icons 4.12', 'React Share 4.4.1', 'React Hot Toast 2.4.1',
         'Node.js 20', 'Express 4.21', 'MongoDB Atlas', 'Mongoose 8.5',
         'JWT 9.0.2', 'bcryptjs 2.4.3', 'Cloudinary 1.41.3', 'Multer 2.0.0',
-        'CORS 2.8.5', 'Helmet 7.1.0', 'Compression 1.7.4', 'Express Rate Limit 7.4.0'
+        'CORS 2.8.5', 'Helmet 7.1.0', 'Compression 1.7.4', 'Express Rate Limit 7.4.0',
+        'Vercel', 'Render'
       ],
       repo: 'github.com/jorgeF1990/feria-de-majo',
       demo: 'feria-de-majo.vercel.app',
@@ -331,18 +349,20 @@ export const projectData = {
       title: 'Feria de Majo - Artisan Clothing Catalog',
       tag: 'Full Stack',
       meta: 'Demo: feria-de-majo.vercel.app',
-      description: 'Digital catalog for an artisan and second-hand clothing fair. Allows organizers to exhibit garments, manage availability and allow visitors to explore the catalog easily from any device. Includes admin panel to manage products, images and availability statuses.',
+      description: 'Digital catalog for an artisan and second-hand clothing fair. Allows organizers to exhibit garments, manage availability and allow visitors to explore the catalog easily from any device. Frontend deployed on Vercel and Backend on Render.',
       features: [
         'Interactive Catalog', 'Advanced Filters', 'JWT Authentication',
         'Admin Panel', 'Image Upload (Cloudinary)', 'Image Carousel',
         'Product Modal', 'Social Media Sharing', 'Responsive Design',
-        'Dark/Light Mode', 'Real-time Search', 'Smooth Scroll'
+        'Dark/Light Mode', 'Real-time Search', 'Smooth Scroll',
+        'Frontend Deployment on Vercel', 'Backend on Render'
       ],
       techs: ['React 18', 'Vite 4.5', 'Tailwind CSS 3.3.5', 'React Router DOM 6.20',
         'Axios 1.6.2', 'React Icons 4.12', 'React Share 4.4.1', 'React Hot Toast 2.4.1',
         'Node.js 20', 'Express 4.21', 'MongoDB Atlas', 'Mongoose 8.5',
         'JWT 9.0.2', 'bcryptjs 2.4.3', 'Cloudinary 1.41.3', 'Multer 2.0.0',
-        'CORS 2.8.5', 'Helmet 7.1.0', 'Compression 1.7.4', 'Express Rate Limit 7.4.0'
+        'CORS 2.8.5', 'Helmet 7.1.0', 'Compression 1.7.4', 'Express Rate Limit 7.4.0',
+        'Vercel', 'Render'
       ],
       repo: 'github.com/jorgeF1990/feria-de-majo',
       demo: 'feria-de-majo.vercel.app',
