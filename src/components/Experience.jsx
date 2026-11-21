@@ -13,6 +13,14 @@ const Experience = () => {
       date: 'Sep 2025 – Presente',
       details: [
         {
+          title: 'Desarrollo de TareaSync (Herramienta Interna):',
+          text: 'Desarrollé TareaSync, una aplicación full-stack interna para la gestión y asignación de tareas. Implementé el frontend con React y el backend con Node.js, Express y MongoDB, incluyendo autenticación JWT, historial de actividad, notificaciones por correo y vistas Kanban/Calendario.'
+        },
+        {
+          title: 'Mantenimiento de Sistemas Legacy (Órdenes Locales):',
+          text: 'Responsable del mantenimiento correctivo y evolutivo de los sistemas de gestión de órdenes que operaban de forma local al momento de mi ingreso. Aseguré la continuidad operativa, resolví incidencias críticas y optimicé procesos existentes para garantizar la estabilidad del negocio.'
+        },
+        {
           title: 'Arquitectura DataBox (Liderazgo Técnico):',
           text: 'Lideré la arquitectura e implementación de la plataforma de procesamiento distribuido DataBox para el consumo de datos financieros en tiempo real de BYMA.'
         },
@@ -46,9 +54,10 @@ const Experience = () => {
         }
       ],
       tags: [
-        'Linux', 'Proxmox', 'Python', 'Ansible', 'Node.js', 'MongoDB', 'MySQL', 'WordPress', 'TypeScript', 
-        'CI/CD', 'GitLab CI', 'SonarQube', 'OpenShift', 'Render', '.NET 8', 'C#', 'Apache Kafka', 
-        'PostgreSQL', 'Angular 17', 'Docker', 'Kubernetes', 'Okta', 'Unit Testing', 'Integration Testing'
+        'React', 'Node.js', 'MongoDB', 'Express', 'JWT', 'Legacy Systems', 'Maintenance', 
+        'Linux', 'Proxmox', 'Python', 'Ansible', 'TypeScript', 'CI/CD', 'GitLab CI', 
+        'SonarQube', 'OpenShift', 'Render', '.NET 8', 'C#', 'Apache Kafka', 'PostgreSQL', 
+        'Angular 17', 'Docker', 'Kubernetes', 'Okta', 'Unit Testing', 'Integration Testing'
       ]
     },
     en: {
@@ -57,6 +66,14 @@ const Experience = () => {
       position: 'DevOps Engineer Semi-Senior (SSr.) · Portfolio Investment',
       date: 'Sep 2025 – Present',
       details: [
+        {
+          title: 'TareaSync Development (Internal Tool):',
+          text: 'Developed TareaSync, a full-stack internal application for task management and assignment. Implemented the frontend with React and the backend with Node.js, Express and MongoDB, including JWT authentication, activity history, email notifications, and Kanban/Calendar views.'
+        },
+        {
+          title: 'Legacy Systems Maintenance (Local Orders):',
+          text: 'Responsible for corrective and evolutionary maintenance of the order management systems operating locally when I joined. Ensured operational continuity, resolved critical incidents, and optimized existing processes to guarantee business stability.'
+        },
         {
           title: 'DataBox Architecture (Technical Leadership):',
           text: 'Led the architecture and implementation of the DataBox distributed processing platform for real-time financial data consumption from BYMA.'
@@ -91,9 +108,10 @@ const Experience = () => {
         }
       ],
       tags: [
-        'Linux', 'Proxmox', 'Python', 'Ansible', 'Node.js', 'MongoDB', 'MySQL', 'WordPress', 'TypeScript', 
-        'CI/CD', 'GitLab CI', 'SonarQube', 'OpenShift', 'Render', '.NET 8', 'C#', 'Apache Kafka', 
-        'PostgreSQL', 'Angular 17', 'Docker', 'Kubernetes', 'Okta', 'Unit Testing', 'Integration Testing'
+        'React', 'Node.js', 'MongoDB', 'Express', 'JWT', 'Legacy Systems', 'Maintenance', 
+        'Linux', 'Proxmox', 'Python', 'Ansible', 'TypeScript', 'CI/CD', 'GitLab CI', 
+        'SonarQube', 'OpenShift', 'Render', '.NET 8', 'C#', 'Apache Kafka', 'PostgreSQL', 
+        'Angular 17', 'Docker', 'Kubernetes', 'Okta', 'Unit Testing', 'Integration Testing'
       ]
     }
   };
