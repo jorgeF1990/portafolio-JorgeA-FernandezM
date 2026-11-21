@@ -21,6 +21,10 @@ const Experience = () => {
           text: 'Diseñé un ecosistema de 4 microservicios en .NET 8 (KafkaConsumer, OrderBook, Reporting, ApiGateway) con YARP, consumiendo tópicos de Apache Kafka y logrando latencias de datos < 1 segundo.'
         },
         {
+          title: 'CI/CD y Automatización de Pruebas:',
+          text: 'Implementé pipelines de CI/CD automatizados (estilo GitLab CI) que incluyen análisis estático con SonarQube, detección de secretos, empaquetado de imágenes Docker optimizadas, y despliegue automatizado en OpenShift. Aseguramiento de calidad mediante pruebas unitarias y de integración integradas en el pipeline.'
+        },
+        {
           title: 'Frontend en Tiempo Real (Angular 17):',
           text: 'Desarrollé el dashboard interactivo con Angular 17 (Signals), Angular Material y SSE (Server-Sent Events) para actualización en vivo del libro de órdenes.'
         },
@@ -33,15 +37,19 @@ const Experience = () => {
           text: 'Aseguré la plataforma con autenticación JWT + OAuth 2.0 contra Okta, implementando auditoría de acciones sensibles y persistencia de mensajes crudos para el cumplimiento normativo de la CNV.'
         },
         {
-          title: 'Automatización CI/CD e Infraestructura:',
-          text: 'Diseñé el sistema de mantenimiento preventivo con Ansible playbooks (parches de Windows, gestión de Firewall, limpieza de logs) y gestioné pipelines de CI/CD para despliegues automáticos en entornos Windows/Linux.'
+          title: 'Automatización de Infraestructura:',
+          text: 'Diseñé el sistema de mantenimiento preventivo con Ansible playbooks (parches de Windows, gestión de Firewall, limpieza de logs) y gestioné pipelines para despliegues automáticos en entornos Windows/Linux.'
         },
         {
           title: 'Optimización Full-Stack:',
           text: 'Optimicé consultas en SQL Server, PostgreSQL y MySQL (reduciendo tiempos de respuesta en un 50%) y desarrollé herramientas internas con React y Node.js que aumentaron la productividad del equipo en un 30%.'
         }
       ],
-      tags: ['Linux', 'Proxmox', 'Python', 'Ansible', 'Node.js', 'MongoDB', 'MySQL', 'WordPress', 'TypeScript', 'CI/CD', 'GitLab CI', 'Render', '.NET 8', 'C#', 'Apache Kafka', 'PostgreSQL', 'Angular 17', 'Docker', 'Kubernetes', 'Okta']
+      tags: [
+        'Linux', 'Proxmox', 'Python', 'Ansible', 'Node.js', 'MongoDB', 'MySQL', 'WordPress', 'TypeScript', 
+        'CI/CD', 'GitLab CI', 'SonarQube', 'OpenShift', 'Render', '.NET 8', 'C#', 'Apache Kafka', 
+        'PostgreSQL', 'Angular 17', 'Docker', 'Kubernetes', 'Okta', 'Unit Testing', 'Integration Testing'
+      ]
     },
     en: {
       tag: 'Experience',
@@ -58,6 +66,10 @@ const Experience = () => {
           text: 'Designed an ecosystem of 4 microservices in .NET 8 (KafkaConsumer, OrderBook, Reporting, ApiGateway) with YARP, consuming Apache Kafka topics and achieving data latencies < 1 second.'
         },
         {
+          title: 'CI/CD & Test Automation:',
+          text: 'Implemented automated CI/CD pipelines (GitLab CI style) including static analysis with SonarQube, secret detection, optimized Docker image packaging, and automated deployment to OpenShift. Quality assurance through unit and integration tests integrated into the pipeline.'
+        },
+        {
           title: 'Real-Time Frontend (Angular 17):',
           text: 'Developed the interactive dashboard with Angular 17 (Signals), Angular Material and SSE (Server-Sent Events) for live order book updates.'
         },
@@ -70,15 +82,19 @@ const Experience = () => {
           text: 'Secured the platform with JWT + OAuth 2.0 authentication against Okta, implementing audit trails of sensitive actions and raw message persistence for CNV regulatory compliance.'
         },
         {
-          title: 'CI/CD Automation & Infrastructure:',
-          text: 'Designed the preventive maintenance system with Ansible playbooks (Windows patches, Firewall management, log cleanup) and managed CI/CD pipelines for automated deployments in Windows/Linux environments.'
+          title: 'Infrastructure Automation:',
+          text: 'Designed the preventive maintenance system with Ansible playbooks (Windows patches, Firewall management, log cleanup) and managed pipelines for automated deployments in Windows/Linux environments.'
         },
         {
           title: 'Full-Stack Optimization:',
           text: 'Optimized SQL Server, PostgreSQL and MySQL queries (reducing response times by 50%) and developed internal tools with React and Node.js that increased team productivity by 30%.'
         }
       ],
-      tags: ['Linux', 'Proxmox', 'Python', 'Ansible', 'Node.js', 'MongoDB', 'MySQL', 'WordPress', 'TypeScript', 'CI/CD', 'GitLab CI', 'Render', '.NET 8', 'C#', 'Apache Kafka', 'PostgreSQL', 'Angular 17', 'Docker', 'Kubernetes', 'Okta']
+      tags: [
+        'Linux', 'Proxmox', 'Python', 'Ansible', 'Node.js', 'MongoDB', 'MySQL', 'WordPress', 'TypeScript', 
+        'CI/CD', 'GitLab CI', 'SonarQube', 'OpenShift', 'Render', '.NET 8', 'C#', 'Apache Kafka', 
+        'PostgreSQL', 'Angular 17', 'Docker', 'Kubernetes', 'Okta', 'Unit Testing', 'Integration Testing'
+      ]
     }
   };
 
