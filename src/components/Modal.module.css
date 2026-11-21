@@ -3,52 +3,43 @@
    ============================================================ */
 .modalOverlay {
   position: fixed;
-  top: 0;
-  left: 0;
+  inset: 0; /* MAGIA: Fuerza a cubrir exactamente los 4 bordes sin importar el padding */
   width: 100%;
   height: 100%;
-  background: rgba(11, 27, 47, 0.6);
+  background: rgba(11, 27, 47, 0.75);
   -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
-  z-index: 1000;
+  z-index: 9999;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 2rem;
+  padding: 1rem;
+  box-sizing: border-box; /* Evita que el padding desborde la pantalla */
   animation: overlayIn 0.3s ease;
 }
 
 @keyframes overlayIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+  0% { opacity: 0; }
+  100% { opacity: 1; }
 }
 
 .modalContent {
   background: var(--bg-modal);
   max-width: 720px;
   width: 100%;
-  max-height: 85vh;
+  max-height: 90vh; 
   overflow-y: auto;
   border-radius: 1.5rem;
   padding: 2rem;
   box-shadow: 0 40px 80px -20px var(--shadow-color);
   position: relative;
   animation: modalIn 0.3s ease;
+  box-sizing: border-box; /* Mantiene el padding dentro del 100% del ancho */
 }
 
 @keyframes modalIn {
-  0% {
-    opacity: 0;
-    transform: scale(0.95) translateY(20px);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1) translateY(0);
-  }
+  0% { opacity: 0; transform: scale(0.95) translateY(20px); }
+  100% { opacity: 1; transform: scale(1) translateY(0); }
 }
 
 .modalClose {
@@ -159,7 +150,7 @@
 }
 
 /* ============================================================
-   CREDENTIALS - DISEÑO PROFESIONAL
+   CREDENTIALS
    ============================================================ */
 .credentialsBox {
   background: var(--credentials-bg);
@@ -311,9 +302,14 @@
    RESPONSIVE
    ============================================================ */
 @media (max-width: 768px) {
+  .modalOverlay {
+    padding: 0.5rem; /* Margen pequeño en los bordes para que respire */
+  }
+
   .modalContent {
     padding: 1.5rem;
-    max-height: 90vh;
+    max-height: 95vh; 
+    border-radius: 1rem;
   }
 
   .modalContent h2 {
@@ -335,21 +331,13 @@
   }
 
   .modalImageWrapper {
-    height: 160px;
-  }
-
-  .modalImageOverlay i {
-    font-size: 1.5rem;
-  }
-
-  .modalImageOverlay span {
-    font-size: 0.75rem;
+    height: 180px;
   }
 }
 
 @media (max-width: 480px) {
   .modalOverlay {
-    padding: 1rem;
+    padding: 0.5rem;
   }
 
   .modalContent {
