@@ -36,7 +36,7 @@ const Modal = ({ projectKey, onClose }) => {
 
   // Mapeo exacto de las imágenes
   const projectImages = {
-    databox: 'https://i.postimg.cc/q7d4kw6x/Captura-de-pantalla-2026-10-21-212921.png', // Imagen del modo oscuro
+    databox: 'https://i.postimg.cc/q7d4kw6x/Captura-de-pantalla-2026-10-21-212921.png',
     tareasync: 'https://i.postimg.cc/4yd5H7p6/tareas.jpg',
     seguro: 'https://i.postimg.cc/3R6y9dPm/seguro.jpg',
     inventario: 'https://i.postimg.cc/yYRRQy6N/inventario.jpg',
@@ -128,18 +128,36 @@ const Modal = ({ projectKey, onClose }) => {
   }
 
   return (
-    <div className={styles.modalOverlay}>
-      <div className={styles.modalContent} ref={modalRef}>
-        <button className={styles.modalClose} onClick={onClose}>&times;</button>
+    <div className={styles.modalOverlay} onClick={onClose}>
+      <div className={styles.modalContent} ref={modalRef} onClick={(e) => e.stopPropagation()}>
         
-        {imageUrl && (
-          demoUrl ? (
-            <a 
-              href={demoUrl} 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              className={styles.modalImageLink}
-            >
+        {/* BOTÓN CERRAR FIJO */}
+        <button className={styles.modalClose} onClick={onClose}>&times;</button>
+
+        {/* ÁREA DE SCROLL */}
+        <div className={styles.modalBodyScroll}>
+          {imageUrl && (
+            demoUrl ? (
+              <a 
+                href={demoUrl} 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className={styles.modalImageLink}
+              >
+                <div className={styles.modalImageWrapper}>
+                  <img 
+                    src={imageUrl} 
+                    alt={data.title} 
+                    className={styles.modalImage}
+                    loading="lazy"
+                  />
+                  <div className={styles.modalImageOverlay}>
+                    <i className="fas fa-external-link-alt"></i>
+                    <span>{language === 'es' ? 'Abrir proyecto' : 'Open project'}</span>
+                  </div>
+                </div>
+              </a>
+            ) : (
               <div className={styles.modalImageWrapper}>
                 <img 
                   src={imageUrl} 
@@ -147,46 +165,34 @@ const Modal = ({ projectKey, onClose }) => {
                   className={styles.modalImage}
                   loading="lazy"
                 />
-                <div className={styles.modalImageOverlay}>
-                  <i className="fas fa-external-link-alt"></i>
-                  <span>{language === 'es' ? 'Abrir proyecto' : 'Open project'}</span>
-                </div>
               </div>
-            </a>
-          ) : (
-            <div className={styles.modalImageWrapper}>
-              <img 
-                src={imageUrl} 
-                alt={data.title} 
-                className={styles.modalImage}
-                loading="lazy"
-              />
+            )
+          )}
+
+          <div className={styles.modalInnerContent}>
+            <span className={styles.modalTag}>{data.tag}</span>
+            <h2>{data.title}</h2>
+            <div className={styles.modalMeta}>
+              <i className="far fa-folder-open"></i> {data.meta}
             </div>
-          )
-        )}
+            
+            <p>{data.description}</p>
 
-        <span className={styles.modalTag}>{data.tag}</span>
-        <h2>{data.title}</h2>
-        <div className={styles.modalMeta}>
-          <i className="far fa-folder-open"></i> {data.meta}
-        </div>
-        <div className={styles.modalBodyContent}>
-          <p>{data.description}</p>
+            <h3>{language === 'es' ? 'Características principales' : 'Main Features'}</h3>
+            <div className={styles.featureGrid}>
+              {featuresHtml}
+            </div>
 
-          <h3>{language === 'es' ? 'Características principales' : 'Main Features'}</h3>
-          <div className={styles.featureGrid}>
-            {featuresHtml}
+            <h3>{language === 'es' ? 'Tecnologías utilizadas' : 'Technologies Used'}</h3>
+            <div className={styles.modalTechTags}>
+              {techsHtml}
+            </div>
+
+            {credentialsHtml}
+            {repoHtml}
+            {demoHtml}
+            {backendHtml}
           </div>
-
-          <h3>{language === 'es' ? 'Tecnologías utilizadas' : 'Technologies Used'}</h3>
-          <div className={styles.modalTechTags}>
-            {techsHtml}
-          </div>
-
-          {credentialsHtml}
-          {repoHtml}
-          {demoHtml}
-          {backendHtml}
         </div>
       </div>
     </div>

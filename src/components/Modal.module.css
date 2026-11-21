@@ -3,63 +3,121 @@
    ============================================================ */
 .modalOverlay {
   position: fixed;
-  inset: 0; /* MAGIA: Fuerza a cubrir exactamente los 4 bordes sin importar el padding */
-  width: 100%;
-  height: 100%;
-  background: rgba(11, 27, 47, 0.75);
-  -webkit-backdrop-filter: blur(8px);
-  backdrop-filter: blur(8px);
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(11, 27, 47, 0.8); /* Fondo oscuro */
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
   z-index: 9999;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 1rem;
-  box-sizing: border-box; /* Evita que el padding desborde la pantalla */
-  animation: overlayIn 0.3s ease;
+  padding: 2rem 1rem; /* Margen exterior para que no toque los bordes */
+  box-sizing: border-box;
+  animation: fadeIn 0.3s ease-out;
 }
 
-@keyframes overlayIn {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
+/* ============================================================
+   CONTENEDOR DE LA TARJETA
+   ============================================================ */
 .modalContent {
   background: var(--bg-modal);
-  max-width: 720px;
   width: 100%;
-  max-height: 90vh; 
-  overflow-y: auto;
+  max-width: 720px;
+  max-height: 85vh; /* No cubre toda la pantalla */
   border-radius: 1.5rem;
-  padding: 2rem;
-  box-shadow: 0 40px 80px -20px var(--shadow-color);
   position: relative;
-  animation: modalIn 0.3s ease;
-  box-sizing: border-box; /* Mantiene el padding dentro del 100% del ancho */
+  box-shadow: 0 40px 80px -20px var(--shadow-color);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden; /* Corta el contenido para que respete el border-radius */
+  animation: modalIn 0.3s ease-out;
 }
 
 @keyframes modalIn {
-  0% { opacity: 0; transform: scale(0.95) translateY(20px); }
-  100% { opacity: 1; transform: scale(1) translateY(0); }
+  from { opacity: 0; transform: scale(0.95) translateY(20px); }
+  to { opacity: 1; transform: scale(1) translateY(0); }
 }
 
+/* ============================================================
+   BOTÓN CERRAR (SIEMPRE VISIBLE)
+   ============================================================ */
 .modalClose {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
-  float: right;
-  background: none;
-  border: none;
-  font-size: 1.6rem;
-  color: var(--text-light);
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  color: var(--text-primary);
   cursor: pointer;
   transition: all 0.2s ease;
-  line-height: 1;
-  z-index: 10;
+  z-index: 100;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
 }
 
 .modalClose:hover {
-  color: var(--text-primary);
+  background: var(--primary);
+  color: #fff;
   transform: rotate(90deg);
+}
+
+/* ============================================================
+   ÁREA DE SCROLL
+   ============================================================ */
+.modalBodyScroll {
+  overflow-y: auto;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary) transparent;
+}
+
+.modalBodyScroll::-webkit-scrollbar {
+  width: 8px;
+}
+.modalBodyScroll::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 4px;
+}
+
+/* ============================================================
+   CONTENIDO INTERNO
+   ============================================================ */
+.modalImageWrapper {
+  position: relative;
+  width: 100%;
+  height: 220px;
+  flex-shrink: 0;
+  background: var(--bg-card);
+}
+
+.modalImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+}
+
+.modalInnerContent {
+  padding: 2rem;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.8;
 }
 
 .modalTag {
@@ -87,42 +145,38 @@
   margin-bottom: 1rem;
 }
 
-.modalBodyContent {
-  color: var(--text-secondary);
-  font-size: 0.95rem;
-  line-height: 1.8;
-}
-
-.modalBodyContent h3 {
+.modalContent h3 {
   font-size: 1.1rem;
-  margin: 1rem 0 0.4rem;
+  margin: 1.5rem 0 0.5rem;
   color: var(--text-primary);
 }
 
+/* Feature Grid */
 .featureGrid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 0.4rem 0.8rem;
+  gap: 0.6rem 0.8rem;
   background: var(--bg-feature-grid);
-  padding: 0.8rem 1.2rem;
+  padding: 1rem;
   border-radius: 0.8rem;
   margin: 0.6rem 0;
 }
 
 .featureGrid span {
   display: flex;
-  align-items: center;
-  gap: 0.4rem;
+  align-items: flex-start;
+  gap: 0.5rem;
   font-size: 0.85rem;
   color: var(--text-secondary);
 }
 
 .featureGrid span i {
   color: var(--primary);
+  margin-top: 0.2rem;
   width: 1.2rem;
-  font-size: 0.9rem;
 }
 
+/* Tech Tags */
 .modalTechTags {
   display: flex;
   flex-wrap: wrap;
@@ -133,9 +187,9 @@
 .modalTechTags span {
   background: var(--tag-bg);
   color: var(--tag-text);
-  padding: 0.1rem 0.8rem;
+  padding: 0.2rem 0.8rem;
   border-radius: 30px;
-  font-size: 0.7rem;
+  font-size: 0.75rem;
   font-weight: 600;
 }
 
@@ -157,8 +211,7 @@
   border: 1px solid var(--credentials-border);
   border-radius: 0.8rem;
   padding: 1rem 1.2rem;
-  margin: 0.8rem 0;
-  position: relative;
+  margin: 1rem 0;
 }
 
 .credentialsBox .credHeader {
@@ -229,37 +282,13 @@
 }
 
 /* ============================================================
-   MODAL IMAGE
+   MODAL IMAGE (Estilos del enlace interno)
    ============================================================ */
 .modalImageLink {
   display: block;
-  margin: -2rem -2rem 1rem -2rem;
-  border-radius: 1.5rem 1.5rem 0 0;
-  overflow: hidden;
-  position: relative;
   text-decoration: none;
   cursor: pointer;
-}
-
-.modalImageWrapper {
   position: relative;
-  width: 100%;
-  height: 220px;
-  overflow: hidden;
-  background: var(--bg-card);
-}
-
-.modalImage {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: top center;
-  transition: transform 0.4s ease;
-  display: block;
-}
-
-.modalImageLink:hover .modalImage {
-  transform: scale(1.03);
 }
 
 .modalImageOverlay {
@@ -299,70 +328,44 @@
 }
 
 /* ============================================================
-   RESPONSIVE
+   RESPONSIVE MÓVIL
    ============================================================ */
 @media (max-width: 768px) {
   .modalOverlay {
-    padding: 0.5rem; /* Margen pequeño en los bordes para que respire */
+    padding: 1rem 0.5rem; /* Menos margen en móviles */
   }
 
   .modalContent {
-    padding: 1.5rem;
-    max-height: 95vh; 
-    border-radius: 1rem;
+    max-height: 85vh;
+    border-radius: 1.2rem;
+  }
+
+  .modalClose {
+    top: 0.8rem;
+    right: 0.8rem;
+    width: 32px;
+    height: 32px;
+    font-size: 1.1rem;
+  }
+
+  .modalInnerContent {
+    padding: 1.5rem 1.2rem;
   }
 
   .modalContent h2 {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
+    padding-right: 2rem; /* Evita que el título se choque con la X */
   }
 
   .featureGrid {
     grid-template-columns: 1fr;
-    padding: 0.8rem 1rem;
   }
 
   .credentialsGrid {
     grid-template-columns: 1fr;
-    gap: 0.5rem;
-  }
-
-  .modalImageLink {
-    margin: -1.5rem -1.5rem 1rem -1.5rem;
   }
 
   .modalImageWrapper {
-    height: 180px;
-  }
-}
-
-@media (max-width: 480px) {
-  .modalOverlay {
-    padding: 0.5rem;
-  }
-
-  .modalContent {
-    padding: 1.2rem;
-    border-radius: 1rem;
-  }
-
-  .modalContent h2 {
-    font-size: 1.2rem;
-  }
-
-  .featureGrid span {
-    font-size: 0.8rem;
-  }
-
-  .credValue {
-    font-size: 0.75rem;
-    word-break: break-all;
-  }
-
-  .modalImageLink {
-    margin: -1.2rem -1.2rem 0.8rem -1.2rem;
-  }
-
-  .modalImageWrapper {
-    height: 140px;
+    height: 160px;
   }
 }
