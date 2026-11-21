@@ -10,78 +10,78 @@ const Services = () => {
     es: {
       tag: 'Lo que hago',
       title: 'Servicios',
-      desc: 'Soluciones personalizadas para cada necesidad',
+      desc: 'Soluciones end-to-end, desde el desarrollo hasta el despliegue en la nube',
       items: [
         {
           id: 'web',
           icon: 'fa-solid fa-laptop-code',
-          title: 'Desarrollo Web',
+          title: 'Desarrollo Full Stack',
           description: 'Aplicaciones web modernas, responsivas y escalables con las últimas tecnologías.',
-          details: 'Creo aplicaciones web a medida utilizando React, Angular, Node.js y otras tecnologías modernas. Me enfoco en la experiencia de usuario, rendimiento y escalabilidad.',
-          technologies: ['React', 'Angular', 'Node.js', 'TypeScript', 'Tailwind CSS']
+          details: 'Creo aplicaciones web a medida (frontend y backend) utilizando React, Angular, Node.js y .NET 8. Me enfoco en la experiencia de usuario, la seguridad (JWT/OAuth) y la integración con APIs en tiempo real.',
+          technologies: ['React', 'Angular 17', '.NET 8', 'Node.js', 'TypeScript', 'Tailwind CSS']
         },
         {
           id: 'backend',
           icon: 'fa-solid fa-server',
-          title: 'Backend & APIs',
-          description: 'Arquitecturas robustas, APIs RESTful y microservicios con Node.js, Java y más.',
-          details: 'Diseño e implemento APIs RESTful, microservicios y arquitecturas backend escalables con Node.js, Java, Python y bases de datos SQL/NoSQL.',
-          technologies: ['Node.js', 'Java', 'Python', 'MongoDB', 'MySQL', 'PostgreSQL']
+          title: 'Microservicios & APIs',
+          description: 'Arquitecturas robustas, eventos en tiempo real y microservicios escalables.',
+          details: 'Diseño e implemento arquitecturas basadas en microservicios utilizando .NET 8, Apache Kafka y YARP API Gateway. Experto en mensajería asíncrona y comunicación en tiempo real mediante SSE.',
+          technologies: ['Microservicios', '.NET 8', 'Apache Kafka', 'YARP', 'Node.js', 'Python', 'SSE']
+        },
+        {
+          id: 'devops',
+          icon: 'fa-solid fa-infinity', // Icono de DevOps
+          title: 'DevOps & Cloud',
+          description: 'Automatización de despliegues, CI/CD y orquestación de contenedores.',
+          details: 'Implemento pipelines de CI/CD automatizados (GitLab CI) con análisis estático (SonarQube) y pruebas de calidad. Gestiono contenedores con Docker y OpenShift/Kubernetes, y despliego infraestructura en Azure y AWS.',
+          technologies: ['Docker', 'Kubernetes', 'OpenShift', 'Azure', 'AWS', 'GitLab CI/CD', 'SonarQube', 'Ansible']
         },
         {
           id: 'data',
           icon: 'fa-solid fa-database',
           title: 'Gestión de Datos',
           description: 'Diseño y optimización de bases de datos SQL y NoSQL para alto rendimiento.',
-          details: 'Optimizo y diseño bases de datos relacionales y no relacionales para garantizar alto rendimiento, integridad de datos y escalabilidad.',
-          technologies: ['MySQL', 'PostgreSQL', 'MongoDB', 'Redis', 'Firebase']
-        },
-        {
-          id: 'consulting',
-          icon: 'fa-solid fa-rocket',
-          title: 'Consultoría IT',
-          description: 'Asesoramiento en arquitectura, automatización y mejores prácticas de desarrollo.',
-          details: 'Asesoro a equipos en arquitectura de software, automatización de procesos, integración continua y mejores prácticas de desarrollo ágil.',
-          technologies: ['DevOps', 'CI/CD', 'Docker', 'Kubernetes', 'Scrum', 'Kanban']
+          details: 'Optimizo y diseño bases de datos relacionales y no relacionales (PostgreSQL, MongoDB, SQL Server) para garantizar alto rendimiento, integridad de datos y escalabilidad en entornos de alta concurrencia.',
+          technologies: ['PostgreSQL', 'MongoDB', 'SQL Server', 'MySQL', 'Entity Framework', 'Redis']
         }
       ]
     },
     en: {
       tag: 'What I do',
       title: 'Services',
-      desc: 'Custom solutions for every need',
+      desc: 'End-to-end solutions, from development to cloud deployment',
       items: [
         {
           id: 'web',
           icon: 'fa-solid fa-laptop-code',
-          title: 'Web Development',
+          title: 'Full Stack Development',
           description: 'Modern, responsive and scalable web applications with the latest technologies.',
-          details: 'I build custom web applications using React, Angular, Node.js and other modern technologies. Focused on user experience, performance and scalability.',
-          technologies: ['React', 'Angular', 'Node.js', 'TypeScript', 'Tailwind CSS']
+          details: 'I build custom web applications (frontend and backend) using React, Angular, Node.js, and .NET 8. I focus on user experience, security (JWT/OAuth), and integration with real-time APIs.',
+          technologies: ['React', 'Angular 17', '.NET 8', 'Node.js', 'TypeScript', 'Tailwind CSS']
         },
         {
           id: 'backend',
           icon: 'fa-solid fa-server',
-          title: 'Backend & APIs',
-          description: 'Robust architectures, RESTful APIs and microservices with Node.js, Java and more.',
-          details: 'I design and implement RESTful APIs, microservices and scalable backend architectures with Node.js, Java, Python and SQL/NoSQL databases.',
-          technologies: ['Node.js', 'Java', 'Python', 'MongoDB', 'MySQL', 'PostgreSQL']
+          title: 'Microservices & APIs',
+          description: 'Robust architectures, real-time events and scalable microservices.',
+          details: 'I design and implement microservices-based architectures using .NET 8, Apache Kafka, and YARP API Gateway. Expert in asynchronous messaging and real-time communication via SSE.',
+          technologies: ['Microservices', '.NET 8', 'Apache Kafka', 'YARP', 'Node.js', 'Python', 'SSE']
+        },
+        {
+          id: 'devops',
+          icon: 'fa-solid fa-infinity',
+          title: 'DevOps & Cloud',
+          description: 'Deployment automation, CI/CD and container orchestration.',
+          details: 'I implement automated CI/CD pipelines (GitLab CI) with static analysis (SonarQube) and quality testing. I manage containers with Docker and OpenShift/Kubernetes, and deploy infrastructure on Azure and AWS.',
+          technologies: ['Docker', 'Kubernetes', 'OpenShift', 'Azure', 'AWS', 'GitLab CI/CD', 'SonarQube', 'Ansible']
         },
         {
           id: 'data',
           icon: 'fa-solid fa-database',
           title: 'Data Management',
           description: 'Design and optimization of SQL and NoSQL databases for high performance.',
-          details: 'I optimize and design relational and non-relational databases to ensure high performance, data integrity and scalability.',
-          technologies: ['MySQL', 'PostgreSQL', 'MongoDB', 'Redis', 'Firebase']
-        },
-        {
-          id: 'consulting',
-          icon: 'fa-solid fa-rocket',
-          title: 'IT Consulting',
-          description: 'Consulting in architecture, automation and development best practices.',
-          details: 'I advise teams on software architecture, process automation, continuous integration and agile development best practices.',
-          technologies: ['DevOps', 'CI/CD', 'Docker', 'Kubernetes', 'Scrum', 'Kanban']
+          details: 'I optimize and design relational and non-relational databases (PostgreSQL, MongoDB, SQL Server) to ensure high performance, data integrity, and scalability in high-concurrency environments.',
+          technologies: ['PostgreSQL', 'MongoDB', 'SQL Server', 'MySQL', 'Entity Framework', 'Redis']
         }
       ]
     }
