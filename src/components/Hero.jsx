@@ -9,7 +9,7 @@ const Hero = () => {
     es: {
       tag: 'DevOps Semi-Senior & Full Stack Developer',
       title: 'Jorge Fernández',
-      description: 'DevOps Semi-Senior y Desarrollador Full Stack. Especializado en arquitecturas distribuidas de alto rendimiento, microservicios (.NET 8, Kafka) y soluciones end-to-end con Angular 17, React, Node.js y Kubernetes.',
+      description: 'DevOps Semi-Senior y Desarrollador Full Stack con experiencia en el diseño de arquitecturas distribuidas y microservicios de alto rendimiento (.NET 8, Apache Kafka). Especializado en pipelines CI/CD automatizados (OpenShift, SonarQube, Docker) y soluciones end-to-end con Angular 17, React, Node.js y despliegues cloud en Azure, AWS, Vercel y Render.',
       btnPortfolio: 'Ver portafolio',
       btnContact: 'Contactar',
       badge: 'Full Stack & DevOps',
@@ -22,7 +22,7 @@ const Hero = () => {
     en: {
       tag: 'Semi-Senior DevOps & Full Stack Developer',
       title: 'Jorge Fernández',
-      description: 'Semi-Senior DevOps Engineer and Full Stack Developer. Specialized in high-performance distributed architectures, microservices (.NET 8, Kafka) and end-to-end solutions with Angular 17, React, Node.js and Kubernetes.',
+      description: 'Semi-Senior DevOps Engineer and Full Stack Developer with experience in designing high-performance distributed architectures and microservices (.NET 8, Apache Kafka). Specialized in automated CI/CD pipelines (OpenShift, SonarQube, Docker) and end-to-end solutions with Angular 17, React, Node.js, and cloud deployments on Azure, AWS, Vercel, and Render.',
       btnPortfolio: 'View portfolio',
       btnContact: 'Contact',
       badge: 'Full Stack & DevOps',
@@ -73,7 +73,7 @@ const Hero = () => {
             <i className="fab fa-github"></i>
           </a>
           <a href="https://gitlab.com/jorgeafm" target="_blank" rel="noopener noreferrer" aria-label="GitLab">
-            <i class="fab fa-gitlab"></i>
+            <i className="fab fa-gitlab"></i>
           </a>
           <a href="https://www.linkedin.com/in/jorge-fern%C3%A1ndez-montaner-50115412b/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
             <i className="fab fa-linkedin-in"></i>
