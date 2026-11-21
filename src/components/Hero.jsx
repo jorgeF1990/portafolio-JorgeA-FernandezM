@@ -7,12 +7,12 @@ const Hero = () => {
 
   const content = {
     es: {
-      tag: 'DevOps Semi-Senior & Full Stack Developer',
+      tag: 'DevOps Engineer & Full Stack Developer',
       title: 'Jorge Fernández',
-      description: 'DevOps Semi-Senior y Desarrollador Full Stack con experiencia en el diseño de arquitecturas distribuidas y microservicios de alto rendimiento (.NET 8, Apache Kafka). Especializado en pipelines CI/CD automatizados (OpenShift, SonarQube, Docker) y soluciones end-to-end con Angular 17, React, Node.js y despliegues cloud en Azure, AWS, Vercel y Render.',
+      description: 'DevOps Engineer Semi-Senior y Desarrollador Full Stack con experiencia en el diseño de arquitecturas distribuidas y microservicios de alto rendimiento (.NET 8, Apache Kafka). Especializado en pipelines CI/CD automatizados (OpenShift, SonarQube, Docker) y soluciones end-to-end con Angular 17, React, Node.js y despliegues cloud en Azure, AWS, Vercel y Render.',
       btnPortfolio: 'Ver portafolio',
       btnContact: 'Contactar',
-      badge: 'Full Stack & DevOps',
+      badge: 'DevOps & Full Stack',
       stats: [
         { number: '3+', label: 'Años de experiencia' },
         { number: '6+', label: 'Proyectos' },
@@ -20,12 +20,12 @@ const Hero = () => {
       ]
     },
     en: {
-      tag: 'Semi-Senior DevOps & Full Stack Developer',
+      tag: 'DevOps Engineer & Full Stack Developer',
       title: 'Jorge Fernández',
       description: 'Semi-Senior DevOps Engineer and Full Stack Developer with experience in designing high-performance distributed architectures and microservices (.NET 8, Apache Kafka). Specialized in automated CI/CD pipelines (OpenShift, SonarQube, Docker) and end-to-end solutions with Angular 17, React, Node.js, and cloud deployments on Azure, AWS, Vercel, and Render.',
       btnPortfolio: 'View portfolio',
       btnContact: 'Contact',
-      badge: 'Full Stack & DevOps',
+      badge: 'DevOps & Full Stack',
       stats: [
         { number: '3+', label: 'Years experience' },
         { number: '6+', label: 'Projects' },
