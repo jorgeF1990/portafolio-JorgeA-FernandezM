@@ -10,30 +10,30 @@ const Services = () => {
     es: {
       tag: 'Lo que hago',
       title: 'Servicios',
-      desc: 'Soluciones end-to-end, desde el desarrollo hasta el despliegue en la nube',
+      desc: 'Soluciones end-to-end: desarrollo, arquitectura, DevOps y cloud',
       items: [
         {
           id: 'web',
           icon: 'fa-solid fa-laptop-code',
           title: 'Desarrollo Full Stack',
-          description: 'Aplicaciones web modernas, responsivas y escalables con las últimas tecnologías.',
-          details: 'Creo aplicaciones web a medida (frontend y backend) utilizando React, Angular, Node.js y .NET 8. Me enfoco en la experiencia de usuario, la seguridad (JWT/OAuth) y la integración con APIs en tiempo real.',
-          technologies: ['React', 'Angular 17', '.NET 8', 'Node.js', 'TypeScript', 'Tailwind CSS']
+          description: 'Aplicaciones web modernas, responsivas y escalables de punta a punta.',
+          details: 'Desarrollo aplicaciones completas utilizando React, Angular 17, Node.js y .NET 8. Me enfoco en la experiencia de usuario, el rendimiento y la integración de APIs RESTful, bases de datos SQL/NoSQL y servicios de terceros (Cloudinary, PayPal, Nodemailer).',
+          technologies: ['React', 'Angular 17', '.NET 8', 'Node.js', 'TypeScript', 'Tailwind CSS', 'Material-UI']
         },
         {
           id: 'backend',
           icon: 'fa-solid fa-server',
-          title: 'Microservicios & APIs',
-          description: 'Arquitecturas robustas, eventos en tiempo real y microservicios escalables.',
-          details: 'Diseño e implemento arquitecturas basadas en microservicios utilizando .NET 8, Apache Kafka y YARP API Gateway. Experto en mensajería asíncrona y comunicación en tiempo real mediante SSE.',
-          technologies: ['Microservicios', '.NET 8', 'Apache Kafka', 'YARP', 'Node.js', 'Python', 'SSE']
+          title: 'Backend & Microservicios',
+          description: 'Arquitecturas robustas, APIs RESTful, eventos en tiempo real y microservicios.',
+          details: 'Diseño e implemento APIs RESTful, microservicios y arquitecturas backend escalables con .NET 8, Node.js, Python y FastAPI. Experto en mensajería asíncrona (Apache Kafka), API Gateways (YARP) y comunicación en tiempo real (SSE).',
+          technologies: ['.NET 8', 'C#', 'Node.js', 'Python', 'FastAPI', 'Apache Kafka', 'YARP', 'SSE']
         },
         {
           id: 'devops',
-          icon: 'fa-solid fa-infinity', // Icono de DevOps
+          icon: 'fa-solid fa-infinity',
           title: 'DevOps & Cloud',
           description: 'Automatización de despliegues, CI/CD y orquestación de contenedores.',
-          details: 'Implemento pipelines de CI/CD automatizados (GitLab CI) con análisis estático (SonarQube) y pruebas de calidad. Gestiono contenedores con Docker y OpenShift/Kubernetes, y despliego infraestructura en Azure y AWS.',
+          details: 'Implemento pipelines de CI/CD (GitLab CI) con análisis estático (SonarQube), detección de secretos y pruebas automatizadas (unitarias/integración). Gestiono contenedores con Docker y OpenShift/Kubernetes, y despliego infraestructura en Azure y AWS.',
           technologies: ['Docker', 'Kubernetes', 'OpenShift', 'Azure', 'AWS', 'GitLab CI/CD', 'SonarQube', 'Ansible']
         },
         {
@@ -41,38 +41,38 @@ const Services = () => {
           icon: 'fa-solid fa-database',
           title: 'Gestión de Datos',
           description: 'Diseño y optimización de bases de datos SQL y NoSQL para alto rendimiento.',
-          details: 'Optimizo y diseño bases de datos relacionales y no relacionales (PostgreSQL, MongoDB, SQL Server) para garantizar alto rendimiento, integridad de datos y escalabilidad en entornos de alta concurrencia.',
-          technologies: ['PostgreSQL', 'MongoDB', 'SQL Server', 'MySQL', 'Entity Framework', 'Redis']
+          details: 'Optimizo y diseño bases de datos relacionales y no relacionales (PostgreSQL, MongoDB, SQL Server, MySQL, Firebase, Redis) para garantizar alto rendimiento, integridad de datos y escalabilidad en entornos de alta concurrencia.',
+          technologies: ['PostgreSQL', 'MongoDB', 'SQL Server', 'MySQL', 'Redis', 'Firebase', 'Entity Framework']
         }
       ]
     },
     en: {
       tag: 'What I do',
       title: 'Services',
-      desc: 'End-to-end solutions, from development to cloud deployment',
+      desc: 'End-to-end solutions: development, architecture, DevOps and cloud',
       items: [
         {
           id: 'web',
           icon: 'fa-solid fa-laptop-code',
           title: 'Full Stack Development',
-          description: 'Modern, responsive and scalable web applications with the latest technologies.',
-          details: 'I build custom web applications (frontend and backend) using React, Angular, Node.js, and .NET 8. I focus on user experience, security (JWT/OAuth), and integration with real-time APIs.',
-          technologies: ['React', 'Angular 17', '.NET 8', 'Node.js', 'TypeScript', 'Tailwind CSS']
+          description: 'Modern, responsive and scalable web applications from start to finish.',
+          details: 'I build complete applications using React, Angular 17, Node.js, and .NET 8. I focus on user experience, performance, and integration with RESTful APIs, SQL/NoSQL databases, and third-party services (Cloudinary, PayPal, Nodemailer).',
+          technologies: ['React', 'Angular 17', '.NET 8', 'Node.js', 'TypeScript', 'Tailwind CSS', 'Material-UI']
         },
         {
           id: 'backend',
           icon: 'fa-solid fa-server',
-          title: 'Microservices & APIs',
-          description: 'Robust architectures, real-time events and scalable microservices.',
-          details: 'I design and implement microservices-based architectures using .NET 8, Apache Kafka, and YARP API Gateway. Expert in asynchronous messaging and real-time communication via SSE.',
-          technologies: ['Microservices', '.NET 8', 'Apache Kafka', 'YARP', 'Node.js', 'Python', 'SSE']
+          title: 'Backend & Microservices',
+          description: 'Robust architectures, RESTful APIs, real-time events and microservices.',
+          details: 'I design and implement RESTful APIs, microservices, and scalable backend architectures with .NET 8, Node.js, Python, and FastAPI. Expert in asynchronous messaging (Apache Kafka), API Gateways (YARP), and real-time communication (SSE).',
+          technologies: ['.NET 8', 'C#', 'Node.js', 'Python', 'FastAPI', 'Apache Kafka', 'YARP', 'SSE']
         },
         {
           id: 'devops',
           icon: 'fa-solid fa-infinity',
           title: 'DevOps & Cloud',
           description: 'Deployment automation, CI/CD and container orchestration.',
-          details: 'I implement automated CI/CD pipelines (GitLab CI) with static analysis (SonarQube) and quality testing. I manage containers with Docker and OpenShift/Kubernetes, and deploy infrastructure on Azure and AWS.',
+          details: 'I implement CI/CD pipelines (GitLab CI) with static analysis (SonarQube), secret detection, and automated testing (unit/integration). I manage containers with Docker and OpenShift/Kubernetes, and deploy infrastructure on Azure and AWS.',
           technologies: ['Docker', 'Kubernetes', 'OpenShift', 'Azure', 'AWS', 'GitLab CI/CD', 'SonarQube', 'Ansible']
         },
         {
@@ -80,8 +80,8 @@ const Services = () => {
           icon: 'fa-solid fa-database',
           title: 'Data Management',
           description: 'Design and optimization of SQL and NoSQL databases for high performance.',
-          details: 'I optimize and design relational and non-relational databases (PostgreSQL, MongoDB, SQL Server) to ensure high performance, data integrity, and scalability in high-concurrency environments.',
-          technologies: ['PostgreSQL', 'MongoDB', 'SQL Server', 'MySQL', 'Entity Framework', 'Redis']
+          details: 'I optimize and design relational and non-relational databases (PostgreSQL, MongoDB, SQL Server, MySQL, Firebase, Redis) to ensure high performance, data integrity, and scalability in high-concurrency environments.',
+          technologies: ['PostgreSQL', 'MongoDB', 'SQL Server', 'MySQL', 'Redis', 'Firebase', 'Entity Framework']
         }
       ]
     }
