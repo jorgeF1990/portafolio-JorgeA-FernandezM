@@ -78,7 +78,6 @@ const Certifications = () => {
       meta: ['Anthropic Education · 2026', 'Certificación'],
       link: 'https://verify.skilljar.com/c/vwahg9ju2584'
     },
-    // ===== NUEVAS CERTIFICACIONES =====
     {
       icon: 'fab fa-microsoft',
       name: {
@@ -123,6 +122,15 @@ const Certifications = () => {
       },
       meta: ['LinkedIn Learning · 2026', '.NET'],
       link: 'https://www.linkedin.com/learning/certificates/54a8da8d6cc05309ebf67c2db45e14c0c9869dfc97d97b6af814e08a3996a599'
+    },
+    {
+      icon: 'fas fa-code', // Icono para .NET 10
+      name: {
+        es: '.NET 10 Esencial',
+        en: '.NET 10 Essentials'
+      },
+      meta: ['LinkedIn Learning · 2026', '.NET Framework / C#'],
+      link: 'https://www.linkedin.com/learning/certificates/212fedaa9efae1530c0048960ca7a0d24585afa1e99be702361958fb5dbb7205'
     }
   ];
 
