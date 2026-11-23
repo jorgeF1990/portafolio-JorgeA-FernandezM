@@ -6,14 +6,14 @@
   inset: 0;
   width: 100vw;
   height: 100vh;
-  background: rgba(11, 27, 47, 0.8); /* Fondo oscuro */
+  background: rgba(11, 27, 47, 0.8);
   -webkit-backdrop-filter: blur(5px);
   backdrop-filter: blur(5px);
   z-index: 9999;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 2rem 1rem; /* Margen exterior para que no toque los bordes */
+  padding: 1.5rem 1rem; 
   box-sizing: border-box;
   animation: fadeIn 0.3s ease-out;
 }
@@ -30,13 +30,13 @@
   background: var(--bg-modal);
   width: 100%;
   max-width: 720px;
-  max-height: 85vh; /* No cubre toda la pantalla */
+  max-height: 90vh; /* Aumentado a 90vh para ver más en el celular */
   border-radius: 1.5rem;
   position: relative;
   box-shadow: 0 40px 80px -20px var(--shadow-color);
   display: flex;
   flex-direction: column;
-  overflow: hidden; /* Corta el contenido para que respete el border-radius */
+  overflow: hidden;
   animation: modalIn 0.3s ease-out;
 }
 
@@ -46,7 +46,7 @@
 }
 
 /* ============================================================
-   BOTÓN CERRAR (SIEMPRE VISIBLE)
+   BOTÓN CERRAR
    ============================================================ */
 .modalClose {
   position: absolute;
@@ -75,15 +75,18 @@
 }
 
 /* ============================================================
-   ÁREA DE SCROLL
+   ÁREA DE SCROLL (CORREGIDA)
    ============================================================ */
 .modalBodyScroll {
   overflow-y: auto;
   flex: 1;
   display: flex;
   flex-direction: column;
+  /* El scroll ahora llega hasta el fondo real */
+  padding-bottom: 1rem; 
   scrollbar-width: thin;
   scrollbar-color: var(--primary) transparent;
+  -webkit-overflow-scrolling: touch; /* Mejora la fluidez en iOS */
 }
 
 .modalBodyScroll::-webkit-scrollbar {
@@ -115,6 +118,7 @@
 
 .modalInnerContent {
   padding: 2rem;
+  padding-bottom: 4rem; /* Espacio extra al final para que no se corte la info */
   color: var(--text-secondary);
   font-size: 0.95rem;
   line-height: 1.8;
@@ -197,6 +201,7 @@
   color: var(--link-color);
   text-decoration: none;
   border-bottom: 1px solid var(--link-color);
+  word-break: break-all; /* Evita que links largos rompan el diseño */
 }
 
 .repoLink:hover {
@@ -282,7 +287,7 @@
 }
 
 /* ============================================================
-   MODAL IMAGE (Estilos del enlace interno)
+   MODAL IMAGE
    ============================================================ */
 .modalImageLink {
   display: block;
@@ -332,11 +337,11 @@
    ============================================================ */
 @media (max-width: 768px) {
   .modalOverlay {
-    padding: 1rem 0.5rem; /* Menos margen en móviles */
+    padding: 1rem 0.5rem; 
   }
 
   .modalContent {
-    max-height: 85vh;
+    max-height: 92vh; /* Aprovecha casi toda la pantalla en móvil */
     border-radius: 1.2rem;
   }
 
@@ -349,12 +354,13 @@
   }
 
   .modalInnerContent {
-    padding: 1.5rem 1.2rem;
+    padding: 1.2rem;
+    padding-bottom: 4rem; /* Mantiene el margen inferior para poder scrollear bien */
   }
 
   .modalContent h2 {
     font-size: 1.3rem;
-    padding-right: 2rem; /* Evita que el título se choque con la X */
+    padding-right: 2rem; 
   }
 
   .featureGrid {
