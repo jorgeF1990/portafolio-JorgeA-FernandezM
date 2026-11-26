@@ -139,7 +139,7 @@ const Certifications = () => {
         es: '.NET a fondo: Microservicios',
         en: '.NET in Depth: Microservices'
       },
-      meta: ['LinkedIn Learning · 2026', 'Architecture / RabbitMQ'],
+      meta: ['LinkedIn Learning · 2026', 'Architecture / RabbitMQ  / OpenTelemetry'],
       link: 'https://www.linkedin.com/learning/certificates/9b8b3eb913b2332cffb84538333ae023f26f5a848bfcb89e96ce4c971cabdc32'
     }
   ];

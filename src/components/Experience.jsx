@@ -37,8 +37,8 @@ const Experience = () => {
           text: 'Desarrollé el dashboard interactivo con Angular 17 (Signals), Angular Material y SSE (Server-Sent Events) para actualización en vivo del libro de órdenes.'
         },
         {
-          title: 'Alta Disponibilidad y Persistencia:',
-          text: 'Implementé la persistencia en PostgreSQL 16 usando Entity Framework Core, garantizando un 99.9% de disponibilidad mediante Docker y Kubernetes (con ConfigMaps, Secrets e Ingress).'
+          title: 'Alta Disponibilidad y Observabilidad:',
+          text: 'Implementé la persistencia en PostgreSQL 16 usando Entity Framework Core, garantizando un 99.9% de disponibilidad mediante Docker y Kubernetes. Añadí capacidades de observabilidad con OpenTelemetry y dashboards en Grafana para el monitoreo de métricas y trazas distribuidas.'
         },
         {
           title: 'Seguridad y Compliance Financiero:',
@@ -56,8 +56,9 @@ const Experience = () => {
       tags: [
         'React', 'Node.js', 'MongoDB', 'Express', 'JWT', 'Legacy Systems', 'Maintenance', 
         'Linux', 'Proxmox', 'Python', 'Ansible', 'TypeScript', 'CI/CD', 'GitLab CI', 
-        'SonarQube', 'OpenShift', 'Render', '.NET 8', 'C#', 'Apache Kafka', 'PostgreSQL', 
-        'Angular 17', 'Docker', 'Kubernetes', 'Okta', 'Unit Testing', 'Integration Testing'
+        'SonarQube', 'OpenShift', 'Render', '.NET 8', 'C#', 'Apache Kafka', 'RabbitMQ', // RabbitMQ agregado
+        'PostgreSQL', 'Angular 17', 'Docker', 'Kubernetes', 'Okta', 'Unit Testing', 'Integration Testing',
+        'OpenTelemetry', 'Grafana' // Observabilidad agregada
       ]
     },
     en: {
@@ -91,8 +92,8 @@ const Experience = () => {
           text: 'Developed the interactive dashboard with Angular 17 (Signals), Angular Material and SSE (Server-Sent Events) for live order book updates.'
         },
         {
-          title: 'High Availability & Persistence:',
-          text: 'Implemented persistence in PostgreSQL 16 using Entity Framework Core, ensuring 99.9% availability through Docker and Kubernetes (with ConfigMaps, Secrets and Ingress).'
+          title: 'High Availability & Observability:',
+          text: 'Implemented persistence in PostgreSQL 16 using Entity Framework Core, ensuring 99.9% availability through Docker and Kubernetes. Added observability capabilities with OpenTelemetry and Grafana dashboards for monitoring metrics and distributed traces.'
         },
         {
           title: 'Security & Financial Compliance:',
@@ -110,8 +111,9 @@ const Experience = () => {
       tags: [
         'React', 'Node.js', 'MongoDB', 'Express', 'JWT', 'Legacy Systems', 'Maintenance', 
         'Linux', 'Proxmox', 'Python', 'Ansible', 'TypeScript', 'CI/CD', 'GitLab CI', 
-        'SonarQube', 'OpenShift', 'Render', '.NET 8', 'C#', 'Apache Kafka', 'PostgreSQL', 
-        'Angular 17', 'Docker', 'Kubernetes', 'Okta', 'Unit Testing', 'Integration Testing'
+        'SonarQube', 'OpenShift', 'Render', '.NET 8', 'C#', 'Apache Kafka', 'RabbitMQ',
+        'PostgreSQL', 'Angular 17', 'Docker', 'Kubernetes', 'Okta', 'Unit Testing', 'Integration Testing',
+        'OpenTelemetry', 'Grafana'
       ]
     }
   };
