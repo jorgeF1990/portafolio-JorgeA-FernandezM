@@ -25,16 +25,16 @@ const Services = () => {
           icon: 'fa-solid fa-server',
           title: 'Backend & Microservicios',
           description: 'Arquitecturas robustas, APIs RESTful, eventos en tiempo real y microservicios.',
-          details: 'Diseño e implemento APIs RESTful, microservicios y arquitecturas backend escalables con .NET 8, Node.js, Python y FastAPI. Experto en mensajería asíncrona (Apache Kafka), API Gateways (YARP) y comunicación en tiempo real (SSE).',
-          technologies: ['.NET 8', 'C#', 'Node.js', 'Python', 'FastAPI', 'Apache Kafka', 'YARP', 'SSE']
+          details: 'Diseño e implemento APIs RESTful, microservicios y arquitecturas backend escalables con .NET 8, Node.js, Python y FastAPI. Experto en mensajería asíncrona (Apache Kafka, RabbitMQ), patrones de resiliencia (Outbox), API Gateways (YARP) y comunicación en tiempo real (SSE).', // <-- ACTUALIZADO
+          technologies: ['.NET 8', 'C#', 'Node.js', 'Python', 'FastAPI', 'Apache Kafka', 'RabbitMQ', 'YARP', 'SSE'] // <-- ACTUALIZADO
         },
         {
           id: 'devops',
           icon: 'fa-solid fa-infinity',
           title: 'DevOps & Cloud',
           description: 'Automatización de despliegues, CI/CD y orquestación de contenedores.',
-          details: 'Implemento pipelines de CI/CD (GitLab CI) con análisis estático (SonarQube), detección de secretos y pruebas automatizadas (unitarias/integración). Gestiono contenedores con Docker y OpenShift/Kubernetes, y despliego infraestructura y aplicaciones en Azure, AWS, Vercel y Render.',
-          technologies: ['Docker', 'Kubernetes', 'OpenShift', 'Azure', 'AWS', 'Vercel', 'Render', 'GitLab CI/CD', 'SonarQube', 'Ansible']
+          details: 'Implemento pipelines de CI/CD (GitLab CI) con análisis estático (SonarQube), detección de secretos y pruebas automatizadas (unitarias/integración). Gestiono contenedores con Docker y OpenShift/Kubernetes, y despliego infraestructura y aplicaciones en Azure, AWS, Vercel y Render, añadiendo observabilidad con OpenTelemetry y Grafana.', // <-- ACTUALIZADO
+          technologies: ['Docker', 'Kubernetes', 'OpenShift', 'Azure', 'AWS', 'Vercel', 'Render', 'GitLab CI/CD', 'SonarQube', 'Ansible', 'OpenTelemetry', 'Grafana'] // <-- ACTUALIZADO
         },
         {
           id: 'data',
@@ -64,16 +64,16 @@ const Services = () => {
           icon: 'fa-solid fa-server',
           title: 'Backend & Microservices',
           description: 'Robust architectures, RESTful APIs, real-time events and microservices.',
-          details: 'I design and implement RESTful APIs, microservices, and scalable backend architectures with .NET 8, Node.js, Python, and FastAPI. Expert in asynchronous messaging (Apache Kafka), API Gateways (YARP), and real-time communication (SSE).',
-          technologies: ['.NET 8', 'C#', 'Node.js', 'Python', 'FastAPI', 'Apache Kafka', 'YARP', 'SSE']
+          details: 'I design and implement RESTful APIs, microservices, and scalable backend architectures with .NET 8, Node.js, Python, and FastAPI. Expert in asynchronous messaging (Apache Kafka, RabbitMQ), resilience patterns (Outbox), API Gateways (YARP), and real-time communication (SSE).', // <-- ACTUALIZADO
+          technologies: ['.NET 8', 'C#', 'Node.js', 'Python', 'FastAPI', 'Apache Kafka', 'RabbitMQ', 'YARP', 'SSE'] // <-- ACTUALIZADO
         },
         {
           id: 'devops',
           icon: 'fa-solid fa-infinity',
           title: 'DevOps & Cloud',
           description: 'Deployment automation, CI/CD and container orchestration.',
-          details: 'I implement CI/CD pipelines (GitLab CI) with static analysis (SonarQube), secret detection, and automated testing (unit/integration). I manage containers with Docker and OpenShift/Kubernetes, and deploy infrastructure and applications on Azure, AWS, Vercel, and Render.',
-          technologies: ['Docker', 'Kubernetes', 'OpenShift', 'Azure', 'AWS', 'Vercel', 'Render', 'GitLab CI/CD', 'SonarQube', 'Ansible']
+          details: 'I implement CI/CD pipelines (GitLab CI) with static analysis (SonarQube), secret detection, and automated testing (unit/integration). I manage containers with Docker and OpenShift/Kubernetes, and deploy infrastructure and applications on Azure, AWS, Vercel, and Render, adding observability with OpenTelemetry and Grafana.', // <-- ACTUALIZADO
+          technologies: ['Docker', 'Kubernetes', 'OpenShift', 'Azure', 'AWS', 'Vercel', 'Render', 'GitLab CI/CD', 'SonarQube', 'Ansible', 'OpenTelemetry', 'Grafana'] // <-- ACTUALIZADO
         },
         {
           id: 'data',
