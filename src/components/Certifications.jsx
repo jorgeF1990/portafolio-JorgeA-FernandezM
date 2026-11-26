@@ -124,13 +124,23 @@ const Certifications = () => {
       link: 'https://www.linkedin.com/learning/certificates/54a8da8d6cc05309ebf67c2db45e14c0c9869dfc97d97b6af814e08a3996a599'
     },
     {
-      icon: 'fas fa-code', // Icono para .NET 10
+      icon: 'fas fa-code',
       name: {
         es: '.NET 10 Esencial',
         en: '.NET 10 Essentials'
       },
       meta: ['LinkedIn Learning · 2026', '.NET Framework / C#'],
       link: 'https://www.linkedin.com/learning/certificates/212fedaa9efae1530c0048960ca7a0d24585afa1e99be702361958fb5dbb7205'
+    },
+    // ===== NUEVA CERTIFICACIÓN =====
+    {
+      icon: 'fas fa-network-wired', // Icono que representa arquitectura/microservicios
+      name: {
+        es: '.NET a fondo: Microservicios',
+        en: '.NET in Depth: Microservices'
+      },
+      meta: ['LinkedIn Learning · 2026', 'Architecture / RabbitMQ'],
+      link: 'https://www.linkedin.com/learning/certificates/9b8b3eb913b2332cffb84538333ae023f26f5a848bfcb89e96ce4c971cabdc32'
     }
   ];
 
